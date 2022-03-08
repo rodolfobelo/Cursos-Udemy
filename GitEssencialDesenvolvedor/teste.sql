@@ -1,1 +1,1 @@
-selectS
+select * from teste
