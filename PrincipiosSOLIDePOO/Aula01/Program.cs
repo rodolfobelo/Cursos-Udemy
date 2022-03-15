@@ -1,8 +1,11 @@
-﻿// See https://aka.ms/new-console-template for more information
-class Program
+﻿namespace Aula01
 {
-    static void Main(string[] args)
-    {        
-        Console.WriteLine("Hello, Aula 01!!");
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Pessoa pessoa = new Pessoa("Rodolfo", "Freire Belo");
+            Console.WriteLine(pessoa.ToString());
+        }
     }
 }
