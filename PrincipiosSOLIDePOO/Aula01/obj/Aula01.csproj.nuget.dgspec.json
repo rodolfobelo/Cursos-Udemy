@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/home/rodolfobelo/GitHub/CursosUdemy/AplicandoPrincipiosSOLIDc#/Aula01/Aula01.csproj": {}
+    "/home/rodolfobelo/GitHub/CursosUdemy/PrincipiosSOLIDePOO/Aula01/Aula01.csproj": {}
   },
   "projects": {
-    "/home/rodolfobelo/GitHub/CursosUdemy/AplicandoPrincipiosSOLIDc#/Aula01/Aula01.csproj": {
+    "/home/rodolfobelo/GitHub/CursosUdemy/PrincipiosSOLIDePOO/Aula01/Aula01.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/rodolfobelo/GitHub/CursosUdemy/AplicandoPrincipiosSOLIDc#/Aula01/Aula01.csproj",
+        "projectUniqueName": "/home/rodolfobelo/GitHub/CursosUdemy/PrincipiosSOLIDePOO/Aula01/Aula01.csproj",
         "projectName": "Aula01",
-        "projectPath": "/home/rodolfobelo/GitHub/CursosUdemy/AplicandoPrincipiosSOLIDc#/Aula01/Aula01.csproj",
+        "projectPath": "/home/rodolfobelo/GitHub/CursosUdemy/PrincipiosSOLIDePOO/Aula01/Aula01.csproj",
         "packagesPath": "/home/rodolfobelo/.nuget/packages/",
-        "outputPath": "/home/rodolfobelo/GitHub/CursosUdemy/AplicandoPrincipiosSOLIDc#/Aula01/obj/",
+        "outputPath": "/home/rodolfobelo/GitHub/CursosUdemy/PrincipiosSOLIDePOO/Aula01/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/home/rodolfobelo/.nuget/NuGet/NuGet.Config"
