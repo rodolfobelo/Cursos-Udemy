@@ -1,0 +1,15 @@
+/home/rodolfobelo/GitHub/CursosUdemy/PrincipiosSOLIDePOO/Session01/bin/Debug/net6.0/Session01
+/home/rodolfobelo/GitHub/CursosUdemy/PrincipiosSOLIDePOO/Session01/bin/Debug/net6.0/Session01.deps.json
+/home/rodolfobelo/GitHub/CursosUdemy/PrincipiosSOLIDePOO/Session01/bin/Debug/net6.0/Session01.runtimeconfig.json
+/home/rodolfobelo/GitHub/CursosUdemy/PrincipiosSOLIDePOO/Session01/bin/Debug/net6.0/Session01.dll
+/home/rodolfobelo/GitHub/CursosUdemy/PrincipiosSOLIDePOO/Session01/bin/Debug/net6.0/Session01.pdb
+/home/rodolfobelo/GitHub/CursosUdemy/PrincipiosSOLIDePOO/Session01/obj/Debug/net6.0/Session01.csproj.AssemblyReference.cache
+/home/rodolfobelo/GitHub/CursosUdemy/PrincipiosSOLIDePOO/Session01/obj/Debug/net6.0/Session01.GeneratedMSBuildEditorConfig.editorconfig
+/home/rodolfobelo/GitHub/CursosUdemy/PrincipiosSOLIDePOO/Session01/obj/Debug/net6.0/Session01.AssemblyInfoInputs.cache
+/home/rodolfobelo/GitHub/CursosUdemy/PrincipiosSOLIDePOO/Session01/obj/Debug/net6.0/Session01.AssemblyInfo.cs
+/home/rodolfobelo/GitHub/CursosUdemy/PrincipiosSOLIDePOO/Session01/obj/Debug/net6.0/Session01.csproj.CoreCompileInputs.cache
+/home/rodolfobelo/GitHub/CursosUdemy/PrincipiosSOLIDePOO/Session01/obj/Debug/net6.0/Session01.dll
+/home/rodolfobelo/GitHub/CursosUdemy/PrincipiosSOLIDePOO/Session01/obj/Debug/net6.0/refint/Session01.dll
+/home/rodolfobelo/GitHub/CursosUdemy/PrincipiosSOLIDePOO/Session01/obj/Debug/net6.0/Session01.pdb
+/home/rodolfobelo/GitHub/CursosUdemy/PrincipiosSOLIDePOO/Session01/obj/Debug/net6.0/Session01.genruntimeconfig.cache
+/home/rodolfobelo/GitHub/CursosUdemy/PrincipiosSOLIDePOO/Session01/obj/Debug/net6.0/ref/Session01.dll
