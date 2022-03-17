@@ -9,7 +9,6 @@ namespace Session01
         }
         static void Main(string[] args)
         {
-            
             System.Console.WriteLine(Somar(x: 2, a: 10, z: 34));
         }
     }
