@@ -7,6 +7,7 @@ namespace Session01
         {
             return x + z + a;
         }
+        
         static void Main(string[] args)
         {
             System.Console.WriteLine(Somar(x: 2, a: 10, z: 34));
