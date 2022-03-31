@@ -1,9 +1,8 @@
 {
   "ExpandedNodes": [
     "",
-    "\\eCommerce.API",
-    "\\eCommerce.API\\Repositories"
+    "\\eCommerce.API"
   ],
-  "SelectedNode": "\\eCommerce.API\\Repositories\\UsuarioRepository.cs",
+  "SelectedNode": "\\eCommerce.API\\eCommerce.API.csproj",
   "PreviewInSolutionExplorer": false
 }
