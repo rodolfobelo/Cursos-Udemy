@@ -8,7 +8,7 @@ namespace eCommerce.API.Repositories
         {
             new Usuario() { Id = 1, Nome="Filipe", Email="filipe@gmail.com"},
             new Usuario() { Id = 2, Nome = "Marcelo", Email = "marcelo@gmail.com"},
-            new Usuario() { Id = 2, Nome = "Jessica", Email = "jessica@gmail.com"}
+            new Usuario() { Id = 3, Nome = "Jessica", Email = "jessica@gmail.com"}
         };
 
         public List<Usuario> GetUsuarios()
@@ -21,6 +21,16 @@ namespace eCommerce.API.Repositories
         }
         public void InsertUsuario(Usuario usuario)
         {
+            var ultimoUsuario = _db.LastOrDefault();
+            if(ultimoUsuario == null)
+            {
+                usuario.Id = 1;
+            }
+            else
+            {
+                usuario.Id = ultimoUsuario.Id;
+                usuario.Id++;
+            }
             _db.Add(usuario);
         }
         public void UpdateUsuario(Usuario usuario)
