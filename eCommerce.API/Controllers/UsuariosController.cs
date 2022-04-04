@@ -18,7 +18,7 @@ namespace eCommerce.API.Controllers
         [HttpGet]
         public IActionResult GetUsuario()
         {
-            return Ok(_repository.GetUsuarios());
+            return Ok(_repository.Get());
         }
 
         [HttpGet("{id}")]
