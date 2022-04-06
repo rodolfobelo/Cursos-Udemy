@@ -11,7 +11,8 @@ namespace eCommerce.API.Repositories
 
         public UsuarioRepository()
         {
-            _connection = new SqlConnection(@"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=eCommerce;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False");
+            //_connection = new SqlConnection(@"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=eCommerce;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False");
+            _connection = new SqlConnection(@"Server=localhost;Database=eCommerce;User Id=sa;Password=!Q2w3e$R;");
         }
 
         public List<Usuario> Get()
@@ -51,8 +52,39 @@ namespace eCommerce.API.Repositories
             return usuarios;
         }
         public Usuario GetUsuario(int id)
-        {
-            return _db.FirstOrDefault(a => a.Id == id);
+        {           
+            try
+            {
+                SqlCommand command = new SqlCommand();
+                command.CommandText = "SELECT * FROM Usuarios WHERE Id = @Id";
+                command.Parameters.AddWithValue("@Id", id);
+                command.Connection = (SqlConnection)_connection;
+
+                _connection.Open();
+                SqlDataReader dataReader = command.ExecuteReader();
+
+                while (dataReader.Read())
+                {
+                    Usuario usuario = new Usuario();
+                    usuario.Id = dataReader.GetInt32("Id");
+                    usuario.Nome = dataReader.GetString("Nome");
+                    usuario.Email = dataReader.GetString("Email");
+                    usuario.Sexo = dataReader.GetString("Sexo");
+                    usuario.RG = dataReader.GetString("RG");
+                    usuario.CPF = dataReader.GetString("CPF");
+                    usuario.NomeMae = dataReader.GetString("NomeMae");
+                    usuario.SituacaoCadastro = dataReader.GetString("SituacaoCadastro");
+                    usuario.DataCadastro = dataReader.GetDateTimeOffset(8);
+
+                    return usuario;
+                }
+            }
+            finally
+            {
+                _connection.Close();
+            }
+
+            return null;
         }
         public void InsertUsuario(Usuario usuario)
         {
