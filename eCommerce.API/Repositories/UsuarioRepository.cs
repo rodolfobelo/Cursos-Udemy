@@ -27,7 +27,7 @@ namespace eCommerce.API.Repositories
                 _connection.Open();
 
                 SqlDataReader dataReader = command.ExecuteReader();
-                
+
                 while (dataReader.Read())
                 {
                     Usuario usuario = new Usuario();
@@ -52,7 +52,7 @@ namespace eCommerce.API.Repositories
             return usuarios;
         }
         public Usuario GetUsuario(int id)
-        {           
+        {
             try
             {
                 SqlCommand command = new SqlCommand();
@@ -88,17 +88,29 @@ namespace eCommerce.API.Repositories
         }
         public void InsertUsuario(Usuario usuario)
         {
-            var ultimoUsuario = _db.LastOrDefault();
-            if (ultimoUsuario == null)
+            try
             {
-                usuario.Id = 1;
+                SqlCommand command = new SqlCommand();
+                command.CommandText = @"INSERT INTO Usuarios (Nome, Email, Sexo, RG, CPF, NomeMae, SituacaoCadastro, DataCadastro) " +
+                    "VALUES (@Nome, @Email, @Sexo, @RG, @CPF, @NomeMae, @SituacaoCadastro, @DataCadastro)";
+                command.Connection = (SqlConnection) _connection;
+
+                command.Parameters.AddWithValue("@Nome", usuario.Nome);
+                command.Parameters.AddWithValue("@Email", usuario.Email);
+                command.Parameters.AddWithValue("@Sexo", usuario.Sexo);
+                command.Parameters.AddWithValue("@RG", usuario.RG);
+                command.Parameters.AddWithValue("@CPF", usuario.CPF);
+                command.Parameters.AddWithValue("@NomeMae", usuario.NomeMae);
+                command.Parameters.AddWithValue("@SituacaoCadastro", usuario.SituacaoCadastro);
+                command.Parameters.AddWithValue("@DataCadastro", usuario.DataCadastro);
+
+                _connection.Open();
+                command.ExecuteNonQuery();
             }
-            else
+            finally
             {
-                usuario.Id = ultimoUsuario.Id;
-                usuario.Id++;
+                _connection.Close();
             }
-            _db.Add(usuario);
         }
         public void UpdateUsuario(Usuario usuario)
         {
