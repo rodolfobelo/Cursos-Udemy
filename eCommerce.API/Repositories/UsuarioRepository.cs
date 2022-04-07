@@ -93,7 +93,7 @@ namespace eCommerce.API.Repositories
                 SqlCommand command = new SqlCommand();
                 command.CommandText = @"INSERT INTO Usuarios (Nome, Email, Sexo, RG, CPF, NomeMae, SituacaoCadastro, DataCadastro) " +
                     "VALUES (@Nome, @Email, @Sexo, @RG, @CPF, @NomeMae, @SituacaoCadastro, @DataCadastro)";
-                command.Connection = (SqlConnection) _connection;
+                command.Connection = (SqlConnection)_connection;
 
                 command.Parameters.AddWithValue("@Nome", usuario.Nome);
                 command.Parameters.AddWithValue("@Email", usuario.Email);
@@ -119,7 +119,20 @@ namespace eCommerce.API.Repositories
         }
         public void DeleteUsuario(int id)
         {
-            _db.Remove(_db.FirstOrDefault(a => a.Id == id));
+            try
+            {
+                SqlCommand command = new SqlCommand();
+                command.CommandText = "DELETE FROM Usuarios WHERE Id = @Id";
+                command.Parameters.AddWithValue("@Id", id);
+                command.Connection = (SqlConnection)_connection;
+
+                _connection.Open();
+                command.ExecuteNonQuery();
+            }
+            finally
+            {
+                _connection.Close();
+            }
         }
 
         private static List<Usuario> _db = new List<Usuario>()
