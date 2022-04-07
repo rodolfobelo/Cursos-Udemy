@@ -92,7 +92,8 @@ namespace eCommerce.API.Repositories
             {
                 SqlCommand command = new SqlCommand();
                 command.CommandText = @"INSERT INTO Usuarios (Nome, Email, Sexo, RG, CPF, NomeMae, SituacaoCadastro, DataCadastro) " +
-                    "VALUES (@Nome, @Email, @Sexo, @RG, @CPF, @NomeMae, @SituacaoCadastro, @DataCadastro)";
+                    "VALUES (@Nome, @Email, @Sexo, @RG, @CPF, @NomeMae, @SituacaoCadastro, @DataCadastro);" +
+                    "SELECT CAST(scope_identity() AS int)";
                 command.Connection = (SqlConnection)_connection;
 
                 command.Parameters.AddWithValue("@Nome", usuario.Nome);
@@ -105,7 +106,7 @@ namespace eCommerce.API.Repositories
                 command.Parameters.AddWithValue("@DataCadastro", usuario.DataCadastro);
 
                 _connection.Open();
-                command.ExecuteNonQuery();
+                usuario.Id = (int)command.ExecuteScalar();
             }
             finally
             {
@@ -114,8 +115,33 @@ namespace eCommerce.API.Repositories
         }
         public void UpdateUsuario(Usuario usuario)
         {
-            _db.Remove(_db.FirstOrDefault(a => a.Id == usuario.Id));
-            _db.Add(usuario);
+            try
+            {
+                SqlCommand command = new SqlCommand();
+                command.CommandText = @"UPDATE Usuarios SET Nome = @NOME, Email = @EMAIL, Sexo = @SEXO, RG = @RG,
+                                        CPF = @CPF, NomeMae = @NOMEMAE, SituacaoCadastro = @SITUACAOCADASTRO,
+                                        DataCadastro = @DATACADASTRO
+                                        WHERE Usuarios.id = @id";
+                command.Connection = (SqlConnection) _connection;
+
+                command.Parameters.AddWithValue("@NOME", usuario.Nome);
+                command.Parameters.AddWithValue("@Email", usuario.Email);
+                command.Parameters.AddWithValue("@Sexo", usuario.Sexo);
+                command.Parameters.AddWithValue("@RG", usuario.RG);
+                command.Parameters.AddWithValue("@CPF", usuario.CPF);
+                command.Parameters.AddWithValue("@NomeMae", usuario.NomeMae);
+                command.Parameters.AddWithValue("@SituacaoCadastro", usuario.SituacaoCadastro);
+                command.Parameters.AddWithValue("@DataCadastro", usuario.DataCadastro);
+
+                command.Parameters.AddWithValue("@id", usuario.Id);
+
+                _connection.Open();
+                command.ExecuteNonQuery();
+            }
+            finally
+            {
+                _connection.Close();
+            }
         }
         public void DeleteUsuario(int id)
         {
@@ -135,11 +161,11 @@ namespace eCommerce.API.Repositories
             }
         }
 
-        private static List<Usuario> _db = new List<Usuario>()
-        {
-            new Usuario() { Id = 1, Nome="Filipe", Email="filipe@gmail.com"},
-            new Usuario() { Id = 2, Nome = "Marcelo", Email = "marcelo@gmail.com"},
-            new Usuario() { Id = 3, Nome = "Jessica", Email = "jessica@gmail.com"}
-        };
+        //private static List<Usuario> _db = new List<Usuario>()
+        //{
+        //    new Usuario() { Id = 1, Nome="Filipe", Email="filipe@gmail.com"},
+        //    new Usuario() { Id = 2, Nome = "Marcelo", Email = "marcelo@gmail.com"},
+        //    new Usuario() { Id = 3, Nome = "Jessica", Email = "jessica@gmail.com"}
+        //};
     }
 }
