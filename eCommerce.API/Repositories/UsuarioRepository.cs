@@ -56,35 +56,71 @@ namespace eCommerce.API.Repositories
             try
             {
                 SqlCommand command = new SqlCommand();
-                command.CommandText = "SELECT * FROM Usuarios u LEFT JOIN Contatos c ON c.UsuarioId = u.Id WHERE u.Id = @Id";
+                command.CommandText = "SELECT * FROM Usuarios u " +
+                    "LEFT JOIN Contatos c ON c.UsuarioId = u.Id " +
+                    "LEFT JOIN EnderecosEntrega ee ON ee.UsuarioId = u.Id " +
+                    "LEFT JOIN UsuariosDepartamentos ud ON ud.UsuarioId = u.Id " +
+                    "INNER JOIN Departamentos d ON d.Id = ud.DepartamentoId " +
+                    "WHERE u.Id = @Id";
                 command.Parameters.AddWithValue("@Id", id);
                 command.Connection = (SqlConnection)_connection;
 
                 _connection.Open();
                 SqlDataReader dataReader = command.ExecuteReader();
 
+                Dictionary<int, Usuario> usuarios = new Dictionary<int, Usuario>();
+
                 while (dataReader.Read())
                 {
                     Usuario usuario = new Usuario();
-                    usuario.Id = dataReader.GetInt32(0);
-                    usuario.Nome = dataReader.GetString("Nome");
-                    usuario.Email = dataReader.GetString("Email");
-                    usuario.Sexo = dataReader.GetString("Sexo");
-                    usuario.RG = dataReader.GetString("RG");
-                    usuario.CPF = dataReader.GetString("CPF");
-                    usuario.NomeMae = dataReader.GetString("NomeMae");
-                    usuario.SituacaoCadastro = dataReader.GetString("SituacaoCadastro");
-                    usuario.DataCadastro = dataReader.GetDateTimeOffset(8);
+                    if (!(usuarios.ContainsKey(dataReader.GetInt32(0))))
+                    {
+                        usuario.Id = dataReader.GetInt32("Id");
+                        usuario.Nome = dataReader.GetString("Nome");
+                        usuario.Email = dataReader.GetString("Email");
+                        usuario.Sexo = dataReader.GetString("Sexo");
+                        usuario.RG = dataReader.GetString("RG");
+                        usuario.CPF = dataReader.GetString("CPF"); usuario.NomeMae = dataReader.GetString("NomeMae");
+                        usuario.SituacaoCadastro = dataReader.GetString("SituacaoCadastro");
+                        usuario.DataCadastro = dataReader.GetDateTimeOffset(8);
 
-                    Contato contato = new Contato();
-                    contato.Id = dataReader.GetInt32(9);
-                    contato.UsuarioId = usuario.Id;
-                    contato.Telefone = dataReader.GetString("Telefone");
-                    contato.Celular = dataReader.GetString("Celular");
-                    usuario.Contato = contato;
+                        Contato contato = new Contato();
+                        contato.Id = dataReader.GetInt32(9);
+                        contato.UsuarioId = usuario.Id;
+                        contato.Telefone = dataReader.GetString("Telefone");
+                        contato.Celular = dataReader.GetString("Celular");
 
-                    return usuario;
+                        usuario.Contato = contato;
+
+                        usuarios.Add(usuario.Id, usuario);
+                    }
+                    else
+                    {
+                        usuario = usuarios[dataReader.GetInt32(0)];
+                    }
+
+                    EnderecoEntrega enderecoEntrega = new EnderecoEntrega();
+                    enderecoEntrega.Id = dataReader.GetInt32(13);
+                    enderecoEntrega.UsuarioId = usuario.Id;
+                    enderecoEntrega.NomeEndereco = dataReader.GetString("NomeEndereco");
+                    enderecoEntrega.Cep = dataReader.GetString("Cep");
+                    enderecoEntrega.Estado = dataReader.GetString("Estado");
+                    enderecoEntrega.Cidade = dataReader.GetString("Cidade");
+                    enderecoEntrega.Bairro = dataReader.GetString("Bairro");
+                    enderecoEntrega.Endereco = dataReader.GetString("Endereco");
+                    enderecoEntrega.Numero = dataReader.GetString("Numero");
+                    enderecoEntrega.Complemento = dataReader.GetString("Complemento");
+
+                    usuario.EnderecoEntregas = (usuario.EnderecoEntregas == null) ? new List<EnderecoEntrega>() : usuario.EnderecoEntregas;
+                    usuario.EnderecoEntregas.Add(enderecoEntrega);
+
+                    Departamento departamento = new Departamento();
+
+
+                    usuario.Departamentos = (usuario.Departamentos == null) ? new List<Departamento>() : usuario.Departamentos;
+                    usuario.Departamentos.Add(departamento);
                 }
+                return usuarios[usuarios.Keys.First()];
             }
             finally
             {
@@ -129,7 +165,7 @@ namespace eCommerce.API.Repositories
                                         CPF = @CPF, NomeMae = @NOMEMAE, SituacaoCadastro = @SITUACAOCADASTRO,
                                         DataCadastro = @DATACADASTRO
                                         WHERE Usuarios.id = @id";
-                command.Connection = (SqlConnection) _connection;
+                command.Connection = (SqlConnection)_connection;
 
                 command.Parameters.AddWithValue("@NOME", usuario.Nome);
                 command.Parameters.AddWithValue("@Email", usuario.Email);
