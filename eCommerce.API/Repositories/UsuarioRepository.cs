@@ -116,7 +116,6 @@ namespace eCommerce.API.Repositories
 
                     Departamento departamento = new Departamento();
 
-
                     usuario.Departamentos = (usuario.Departamentos == null) ? new List<Departamento>() : usuario.Departamentos;
                     usuario.Departamentos.Add(departamento);
                 }
