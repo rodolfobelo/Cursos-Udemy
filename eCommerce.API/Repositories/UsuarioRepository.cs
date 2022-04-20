@@ -75,25 +75,19 @@ namespace eCommerce.API.Repositories
                         usuario.Email = dataReader.GetString("Email");
                         usuario.Sexo = dataReader.GetString("Sexo");
                         usuario.RG = dataReader.GetString("RG");
-                        usuario.CPF = dataReader.GetString("CPF"); usuario.NomeMae = dataReader.GetString("NomeMae");
+                        usuario.CPF = dataReader.GetString("CPF"); 
+                        usuario.NomeMae = dataReader.GetString("NomeMae");
                         usuario.SituacaoCadastro = dataReader.GetString("SituacaoCadastro");
                         usuario.DataCadastro = dataReader.GetDateTimeOffset(8);
-
-                        Contato contato = new Contato();
-                        contato.Id = dataReader.GetInt32(9);
-                        contato.UsuarioId = usuario.Id;
-                        contato.Telefone = dataReader.GetString("Telefone");
-                        contato.Celular = dataReader.GetString("Celular");
-
-                        usuario.Contato = contato;
 
                         usuarios.Add(usuario.Id, usuario);
                     }
                     else
                     {
                         usuario = usuarios[dataReader.GetInt32(0)];
-                    }
+                    }  
 
+                    /*EnderecoEntrega*/
                     EnderecoEntrega enderecoEntrega = new EnderecoEntrega();
                     enderecoEntrega.Id = dataReader.GetInt32(13);
                     enderecoEntrega.UsuarioId = usuario.Id;
@@ -111,7 +105,19 @@ namespace eCommerce.API.Repositories
                     {
                         usuario.EnderecoEntregas.Add(enderecoEntrega);
                     }
+                    /*Contato*/
+                    Contato contato = new Contato();
+                    contato.Id = dataReader.GetInt32(9);
+                    contato.UsuarioId = usuario.Id;
+                    contato.Telefone = dataReader.GetString("Telefone");
+                    contato.Celular = dataReader.GetString("Celular");
 
+                    usuario.Contatos = (usuario.Contatos == null) ? new List<Contato>() : usuario.Contatos;
+                    if (usuario.Contatos.FirstOrDefault(a => a.Id == contato.Id) == null)
+                    {
+                        usuario.Contatos.Add(contato);
+                    }
+                    /*Departamento*/
                     Departamento departamento = new Departamento();
                     departamento.Id = dataReader.GetInt32(26);
                     departamento.Nome = dataReader.GetString("NomeDepartamento");
@@ -157,6 +163,15 @@ namespace eCommerce.API.Repositories
 
                 _connection.Open();
                 usuario.Id = (int)command.ExecuteScalar();
+
+                //command.CommandText = @"INSERT INTO Contatos (UsuarioId, Telefone, Celular) VALUES (@UsuarioId, @Telefone, @Celular)";
+                //command.Parameters.AddWithValue("@UsuarioId", usuario.Id);
+                //command.Parameters.AddWithValue("@Telefone", usuario.Contato.Telefone);
+                //command.Parameters.AddWithValue("@Celular", usuario.Contato.Celular);
+
+                command.ExecuteNonQuery();
+                //command.Connection = (SqlConnection) _connection;
+
             }
             finally
             {
