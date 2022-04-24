@@ -12,7 +12,8 @@
         public string SituacaoCadastro { get; set; }
         public DateTimeOffset DataCadastro { get; set; }
 
-        public ICollection<Contato>? Contatos { get; set; }
+        public Contato? Contatos { get; set; }
+        //public Contato Contatos { get; set; }
         public ICollection<EnderecoEntrega>? EnderecoEntregas { get; set; }
         public ICollection<Departamento>? Departamentos { get; set; }
     }

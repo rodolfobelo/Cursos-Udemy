@@ -75,7 +75,7 @@ namespace eCommerce.API.Repositories
                         usuario.Email = dataReader.GetString("Email");
                         usuario.Sexo = dataReader.GetString("Sexo");
                         usuario.RG = dataReader.GetString("RG");
-                        usuario.CPF = dataReader.GetString("CPF"); 
+                        usuario.CPF = dataReader.GetString("CPF");
                         usuario.NomeMae = dataReader.GetString("NomeMae");
                         usuario.SituacaoCadastro = dataReader.GetString("SituacaoCadastro");
                         usuario.DataCadastro = dataReader.GetDateTimeOffset(8);
@@ -85,7 +85,15 @@ namespace eCommerce.API.Repositories
                     else
                     {
                         usuario = usuarios[dataReader.GetInt32(0)];
-                    }  
+                    }
+                    /*Contato*/
+                    Contato contato = new Contato();
+                    contato.Id = dataReader.GetInt32(9);
+                    contato.UsuarioId = usuario.Id;
+                    contato.Telefone = dataReader.GetString("Telefone");
+                    contato.Celular = dataReader.GetString("Celular");
+
+                    usuario.Contatos = contato;                    
 
                     /*EnderecoEntrega*/
                     EnderecoEntrega enderecoEntrega = new EnderecoEntrega();
@@ -104,19 +112,7 @@ namespace eCommerce.API.Repositories
                     if(usuario.EnderecoEntregas.FirstOrDefault(a => a.Id == enderecoEntrega.Id) == null)
                     {
                         usuario.EnderecoEntregas.Add(enderecoEntrega);
-                    }
-                    /*Contato*/
-                    Contato contato = new Contato();
-                    contato.Id = dataReader.GetInt32(9);
-                    contato.UsuarioId = usuario.Id;
-                    contato.Telefone = dataReader.GetString("Telefone");
-                    contato.Celular = dataReader.GetString("Celular");
-
-                    usuario.Contatos = (usuario.Contatos == null) ? new List<Contato>() : usuario.Contatos;
-                    if (usuario.Contatos.FirstOrDefault(a => a.Id == contato.Id) == null)
-                    {
-                        usuario.Contatos.Add(contato);
-                    }
+                    }                    
                     /*Departamento*/
                     Departamento departamento = new Departamento();
                     departamento.Id = dataReader.GetInt32(26);
@@ -147,9 +143,14 @@ namespace eCommerce.API.Repositories
             try
             {
                 SqlCommand command = new SqlCommand();
-                command.CommandText = @"INSERT INTO Usuarios (Nome, Email, Sexo, RG, CPF, NomeMae, SituacaoCadastro, DataCadastro) " +
-                    "VALUES (@Nome, @Email, @Sexo, @RG, @CPF, @NomeMae, @SituacaoCadastro, @DataCadastro);" +
-                    "SELECT CAST(scope_identity() AS int)";
+
+                command.CommandText = @"EXECUTE [sp].[CadastrarUsuario] @Nome, @Email, @Sexo, @RG, @CPF, @NomeMae, @SituacaoCadastro " +
+                                       "SELECT CAST(scope_identity() AS int)";
+
+                //command.CommandText = @"INSERT INTO [dbo].[Usuarios] (Nome, Email, Sexo, RG, CPF, NomeMae, SituacaoCadastro, DataCadastro) VALUES " +
+                //                       "(@Nome, @Email, @Sexo, @RG, @CPF, @NomeMae, @SituacaoCadastro, GETDATE()) " +
+                //                       "SELECT CAST(scope_identity() AS int)";
+
                 command.Connection = (SqlConnection)_connection;
 
                 command.Parameters.AddWithValue("@Nome", usuario.Nome);
@@ -159,19 +160,24 @@ namespace eCommerce.API.Repositories
                 command.Parameters.AddWithValue("@CPF", usuario.CPF);
                 command.Parameters.AddWithValue("@NomeMae", usuario.NomeMae);
                 command.Parameters.AddWithValue("@SituacaoCadastro", usuario.SituacaoCadastro);
-                command.Parameters.AddWithValue("@DataCadastro", usuario.DataCadastro);
 
                 _connection.Open();
                 usuario.Id = (int)command.ExecuteScalar();
+                Console.WriteLine(usuario.Id);
 
-                //command.CommandText = @"INSERT INTO Contatos (UsuarioId, Telefone, Celular) VALUES (@UsuarioId, @Telefone, @Celular)";
-                //command.Parameters.AddWithValue("@UsuarioId", usuario.Id);
-                //command.Parameters.AddWithValue("@Telefone", usuario.Contato.Telefone);
-                //command.Parameters.AddWithValue("@Celular", usuario.Contato.Celular);
+                ///*Contato*/
+                //command.CommandText = @"INSERT INTO Contatos (UsuarioId, Telefone, Celular) VALUES (@UsuarioId, @Telefone, @Celular); " +
+                //    "SELECT CAST(scope_identity() AS int)";
+                command.CommandText = @"EXECUTE [sp].[CadastrarContato] @UsuarioId, @Telefone, @Celular " +
+                    "SELECT CAST(scope_identity() AS int)";
 
-                command.ExecuteNonQuery();
-                //command.Connection = (SqlConnection) _connection;
+                command.Parameters.AddWithValue("@UsuarioId", usuario.Id);
+                command.Parameters.AddWithValue("@Telefone", usuario.Contatos.Telefone);
+                command.Parameters.AddWithValue("@Celular", usuario.Contatos.Celular);
 
+                usuario.Contatos.UsuarioId = usuario.Id;
+                                
+                usuario.Contatos.Id = (int)command.ExecuteScalar();
             }
             finally
             {
