@@ -147,10 +147,6 @@ namespace eCommerce.API.Repositories
                 command.CommandText = @"EXECUTE [sp].[CadastrarUsuario] @Nome, @Email, @Sexo, @RG, @CPF, @NomeMae, @SituacaoCadastro " +
                                        "SELECT CAST(scope_identity() AS int)";
 
-                //command.CommandText = @"INSERT INTO [dbo].[Usuarios] (Nome, Email, Sexo, RG, CPF, NomeMae, SituacaoCadastro, DataCadastro) VALUES " +
-                //                       "(@Nome, @Email, @Sexo, @RG, @CPF, @NomeMae, @SituacaoCadastro, GETDATE()) " +
-                //                       "SELECT CAST(scope_identity() AS int)";
-
                 command.Connection = (SqlConnection)_connection;
 
                 command.Parameters.AddWithValue("@Nome", usuario.Nome);
@@ -165,9 +161,7 @@ namespace eCommerce.API.Repositories
                 usuario.Id = (int)command.ExecuteScalar();
                 Console.WriteLine(usuario.Id);
 
-                ///*Contato*/
-                //command.CommandText = @"INSERT INTO Contatos (UsuarioId, Telefone, Celular) VALUES (@UsuarioId, @Telefone, @Celular); " +
-                //    "SELECT CAST(scope_identity() AS int)";
+                /*Contato*/
                 command.CommandText = @"EXECUTE [sp].[CadastrarContato] @UsuarioId, @Telefone, @Celular " +
                     "SELECT CAST(scope_identity() AS int)";
 
@@ -178,6 +172,28 @@ namespace eCommerce.API.Repositories
                 usuario.Contatos.UsuarioId = usuario.Id;
                                 
                 usuario.Contatos.Id = (int)command.ExecuteScalar();
+                /*EnderecoEntrega*/
+                foreach(var endereco in usuario.EnderecoEntregas)
+                {
+                    command = new SqlCommand();
+                    command.Connection = (SqlConnection)_connection;
+                    command.CommandText = @"EXECUTE [sp].[CadastroEnderecoEntrega] @UsuarioId, @NomeEndereco, @CEP, @Estado, @Cidade " +
+                                           ",@Bairro  ,@Endereco  ,@Numero  ,@Complemento " +
+                                           "SELECT CAST(scope_identity() AS int)";
+                    command.Parameters.AddWithValue("@UsuarioID", usuario.Id);
+                    command.Parameters.AddWithValue("@NomeEndereco", endereco.NomeEndereco);
+                    command.Parameters.AddWithValue("@CEP", endereco.Cep);
+                    command.Parameters.AddWithValue("@Estado", endereco.Estado);
+                    command.Parameters.AddWithValue("@Cidade", endereco.Cidade);
+                    command.Parameters.AddWithValue("@Bairro", endereco.Bairro);
+                    command.Parameters.AddWithValue("@Endereco", endereco.Endereco);
+                    command.Parameters.AddWithValue("@Numero", endereco.Numero);
+                    command.Parameters.AddWithValue("@Complemento", endereco.Complemento);
+
+                    endereco.Id = (int)command.ExecuteScalar();
+                    endereco.UsuarioId = usuario.Id;
+                }
+                
             }
             finally
             {

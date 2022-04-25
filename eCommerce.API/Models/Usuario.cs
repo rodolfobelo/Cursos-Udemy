@@ -13,7 +13,6 @@
         public DateTimeOffset DataCadastro { get; set; }
 
         public Contato? Contatos { get; set; }
-        //public Contato Contatos { get; set; }
         public ICollection<EnderecoEntrega>? EnderecoEntregas { get; set; }
         public ICollection<Departamento>? Departamentos { get; set; }
     }
