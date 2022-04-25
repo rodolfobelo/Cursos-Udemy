@@ -170,7 +170,7 @@ namespace eCommerce.API.Repositories
                 command.Parameters.AddWithValue("@Celular", usuario.Contatos.Celular);
 
                 usuario.Contatos.UsuarioId = usuario.Id;
-                                
+     
                 usuario.Contatos.Id = (int)command.ExecuteScalar();
                 /*EnderecoEntrega*/
                 foreach(var endereco in usuario.EnderecoEntregas)
@@ -192,6 +192,19 @@ namespace eCommerce.API.Repositories
 
                     endereco.Id = (int)command.ExecuteScalar();
                     endereco.UsuarioId = usuario.Id;
+                    /*Departamento*/
+                    foreach (var departamento in usuario.Departamentos)
+                    {
+                        command = new SqlCommand();
+                        command.Connection = (SqlConnection)_connection;
+                        //command.Transaction = transaction;
+
+                        command.CommandText = "INSERT INTO UsuariosDepartamentos (UsuarioId, DepartamentoId) VALUES (@UsuarioId, @DepartamentoId);";
+                        command.Parameters.AddWithValue("@UsuarioId", usuario.Id);
+                        command.Parameters.AddWithValue("@DepartamentoId", departamento.Id);
+
+                        command.ExecuteNonQuery();
+                    }
                 }
                 
             }
