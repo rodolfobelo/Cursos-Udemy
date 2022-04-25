@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "D:\\GitHub\\CursosUdemy\\eCommerce.API\\eCommerce.API.csproj": {}
+    "C:\\Users\\rodolfo.belo\\Documents\\GitHub\\CursosUdemy\\eCommerce.API\\eCommerce.API.csproj": {}
   },
   "projects": {
-    "D:\\GitHub\\CursosUdemy\\eCommerce.API\\eCommerce.API.csproj": {
+    "C:\\Users\\rodolfo.belo\\Documents\\GitHub\\CursosUdemy\\eCommerce.API\\eCommerce.API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\GitHub\\CursosUdemy\\eCommerce.API\\eCommerce.API.csproj",
+        "projectUniqueName": "C:\\Users\\rodolfo.belo\\Documents\\GitHub\\CursosUdemy\\eCommerce.API\\eCommerce.API.csproj",
         "projectName": "eCommerce.API",
-        "projectPath": "D:\\GitHub\\CursosUdemy\\eCommerce.API\\eCommerce.API.csproj",
-        "packagesPath": "C:\\Users\\rodol\\.nuget\\packages\\",
-        "outputPath": "D:\\GitHub\\CursosUdemy\\eCommerce.API\\obj\\",
+        "projectPath": "C:\\Users\\rodolfo.belo\\Documents\\GitHub\\CursosUdemy\\eCommerce.API\\eCommerce.API.csproj",
+        "packagesPath": "C:\\Users\\rodolfo.belo\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\rodolfo.belo\\Documents\\GitHub\\CursosUdemy\\eCommerce.API\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\rodol\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\rodolfo.belo\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
