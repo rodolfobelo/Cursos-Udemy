@@ -34,10 +34,18 @@ namespace eCommerce.API.Controllers
         }
 
         [HttpPost]
-        public IActionResult InsertUsuario([FromBody]Usuario usuario)
+        public IActionResult InsertUsuario([FromBody] Usuario usuario)
         {
-            _repository.InsertUsuario(usuario);
-            return Ok(usuario);
+            try
+            {
+                _repository.InsertUsuario(usuario);
+                return Ok(usuario);
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, ex.Message);
+            }
+
         }
         [HttpPut]
         public IActionResult UpdateUsuario([FromBody] Usuario usuario)

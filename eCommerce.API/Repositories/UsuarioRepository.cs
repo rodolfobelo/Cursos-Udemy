@@ -93,7 +93,7 @@ namespace eCommerce.API.Repositories
                     contato.Telefone = dataReader.GetString("Telefone");
                     contato.Celular = dataReader.GetString("Celular");
 
-                    usuario.Contatos = contato;                    
+                    usuario.Contatos = contato;
 
                     /*EnderecoEntrega*/
                     EnderecoEntrega enderecoEntrega = new EnderecoEntrega();
@@ -109,10 +109,10 @@ namespace eCommerce.API.Repositories
                     enderecoEntrega.Complemento = dataReader.GetString("Complemento");
 
                     usuario.EnderecoEntregas = (usuario.EnderecoEntregas == null) ? new List<EnderecoEntrega>() : usuario.EnderecoEntregas;
-                    if(usuario.EnderecoEntregas.FirstOrDefault(a => a.Id == enderecoEntrega.Id) == null)
+                    if (usuario.EnderecoEntregas.FirstOrDefault(a => a.Id == enderecoEntrega.Id) == null)
                     {
                         usuario.EnderecoEntregas.Add(enderecoEntrega);
-                    }                    
+                    }
                     /*Departamento*/
                     Departamento departamento = new Departamento();
                     departamento.Id = dataReader.GetInt32(26);
@@ -120,7 +120,7 @@ namespace eCommerce.API.Repositories
 
 
                     usuario.Departamentos = (usuario.Departamentos == null) ? new List<Departamento>() : usuario.Departamentos;
-                    if(usuario.Departamentos.FirstOrDefault(a => a.Id == departamento.Id) == null)
+                    if (usuario.Departamentos.FirstOrDefault(a => a.Id == departamento.Id) == null)
                     {
                         usuario.Departamentos.Add(departamento);
                     }
@@ -140,14 +140,16 @@ namespace eCommerce.API.Repositories
         }
         public void InsertUsuario(Usuario usuario)
         {
+            _connection.Open();
+            SqlTransaction transaction = (SqlTransaction)_connection.BeginTransaction();
             try
             {
                 SqlCommand command = new SqlCommand();
+                command.Transaction = transaction;
+                command.Connection = (SqlConnection)_connection;
 
                 command.CommandText = @"EXECUTE [sp].[CadastrarUsuario] @Nome, @Email, @Sexo, @RG, @CPF, @NomeMae, @SituacaoCadastro " +
                                        "SELECT CAST(scope_identity() AS int)";
-
-                command.Connection = (SqlConnection)_connection;
 
                 command.Parameters.AddWithValue("@Nome", usuario.Nome);
                 command.Parameters.AddWithValue("@Email", usuario.Email);
@@ -157,7 +159,6 @@ namespace eCommerce.API.Repositories
                 command.Parameters.AddWithValue("@NomeMae", usuario.NomeMae);
                 command.Parameters.AddWithValue("@SituacaoCadastro", usuario.SituacaoCadastro);
 
-                _connection.Open();
                 usuario.Id = (int)command.ExecuteScalar();
                 Console.WriteLine(usuario.Id);
 
@@ -170,13 +171,15 @@ namespace eCommerce.API.Repositories
                 command.Parameters.AddWithValue("@Celular", usuario.Contatos.Celular);
 
                 usuario.Contatos.UsuarioId = usuario.Id;
-     
+
                 usuario.Contatos.Id = (int)command.ExecuteScalar();
                 /*EnderecoEntrega*/
-                foreach(var endereco in usuario.EnderecoEntregas)
+                foreach (var endereco in usuario.EnderecoEntregas)
                 {
                     command = new SqlCommand();
                     command.Connection = (SqlConnection)_connection;
+                    command.Transaction = transaction;
+
                     command.CommandText = @"EXECUTE [sp].[CadastroEnderecoEntrega] @UsuarioId, @NomeEndereco, @CEP, @Estado, @Cidade " +
                                            ",@Bairro  ,@Endereco  ,@Numero  ,@Complemento " +
                                            "SELECT CAST(scope_identity() AS int)";
@@ -192,21 +195,33 @@ namespace eCommerce.API.Repositories
 
                     endereco.Id = (int)command.ExecuteScalar();
                     endereco.UsuarioId = usuario.Id;
-                    /*Departamento*/
-                    foreach (var departamento in usuario.Departamentos)
-                    {
-                        command = new SqlCommand();
-                        command.Connection = (SqlConnection)_connection;
-                        //command.Transaction = transaction;
-
-                        command.CommandText = "INSERT INTO UsuariosDepartamentos (UsuarioId, DepartamentoId) VALUES (@UsuarioId, @DepartamentoId);";
-                        command.Parameters.AddWithValue("@UsuarioId", usuario.Id);
-                        command.Parameters.AddWithValue("@DepartamentoId", departamento.Id);
-
-                        command.ExecuteNonQuery();
-                    }
                 }
-                
+                /*Departamento*/
+                foreach (var departamento in usuario.Departamentos)
+                {
+                    command = new SqlCommand();
+                    command.Connection = (SqlConnection)_connection;
+                    command.Transaction = transaction;
+
+                    command.CommandText = "EXECUTE [sp].[CadastroUsuarioDepartamento] @UsuarioId, @DepartamentoId;";
+                    command.Parameters.AddWithValue("@UsuarioId", usuario.Id);
+                    command.Parameters.AddWithValue("@DepartamentoId", departamento.Id);
+
+                    command.ExecuteNonQuery();
+                }
+                transaction.Commit();
+            }
+            catch (Exception ex)
+            {
+                try
+                {
+                    transaction.Rollback();
+                }
+                catch (Exception)
+                {
+
+                }
+                throw new Exception("Erro ao tentar inserir os dados");
             }
             finally
             {
