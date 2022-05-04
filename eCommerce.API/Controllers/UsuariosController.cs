@@ -50,14 +50,26 @@ namespace eCommerce.API.Controllers
         [HttpPut]
         public IActionResult UpdateUsuario([FromBody] Usuario usuario)
         {
-            _repository.UpdateUsuario(usuario);
-            return Ok(usuario);
+            try
+            {
+                _repository.UpdateUsuario(usuario);
+                return Ok(usuario);
+            }catch (Exception ex)
+            {
+                return StatusCode(500, ex.Message);
+            }
         }
         [HttpDelete("{id}")]
         public IActionResult DeleteUsuario(int id)
         {
-            _repository.DeleteUsuario(id);
-            return Ok();
+            try
+            {
+                _repository.DeleteUsuario(id);
+                return Ok();
+            }catch(Exception ex)
+            {
+                return StatusCode(500, ex.Message);
+            }
         }
     }
 }

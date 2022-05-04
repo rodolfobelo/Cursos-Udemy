@@ -6,9 +6,9 @@ namespace eCommerce.API.Repositories
     public interface IContatoRepository
     {
         public List<Contato> Get();
-        public Usuario GetContato(int id);
-        public void InsertContato(Usuario usuario);
-        public void UpdateContato(Usuario usuario);
+        public Contato GetContato(int id);
+        public void InsertContato(Contato contato);
+        public void UpdateContato(Contato contato);
         public void DeleteContato(int id);
 
     }

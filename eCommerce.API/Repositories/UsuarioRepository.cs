@@ -18,13 +18,13 @@ namespace eCommerce.API.Repositories
         public List<Usuario> Get()
         {
             List<Usuario> usuarios = new List<Usuario>();
+            _connection.Open();
             try
             {
                 SqlCommand command = new SqlCommand();
-                command.CommandText = "SELECT * FROM Usuarios";
                 command.Connection = (SqlConnection)_connection;
-
-                _connection.Open();
+                command.CommandText = "sp.SelecionarUsuarios";
+                command.CommandType = CommandType.StoredProcedure;
 
                 SqlDataReader dataReader = command.ExecuteReader();
 
@@ -116,6 +116,7 @@ namespace eCommerce.API.Repositories
                     /*Departamento*/
                     Departamento departamento = new Departamento();
                     departamento.Id = dataReader.GetInt32(26);
+                    departamento.UsuarioDepartamentoId = dataReader.GetInt32("IdUsuarioDepartamento");
                     departamento.Nome = dataReader.GetString("NomeDepartamento");
 
 
@@ -230,16 +231,19 @@ namespace eCommerce.API.Repositories
         }
         public void UpdateUsuario(Usuario usuario)
         {
+            _connection.Open();
+            SqlTransaction transaction = (SqlTransaction)_connection.BeginTransaction();
             try
             {
+                #region Usuarios
+                /*Update Usuario*/
                 SqlCommand command = new SqlCommand();
-                command.CommandText = @"UPDATE Usuarios SET Nome = @NOME, Email = @EMAIL, Sexo = @SEXO, RG = @RG,
-                                        CPF = @CPF, NomeMae = @NOMEMAE, SituacaoCadastro = @SITUACAOCADASTRO,
-                                        DataCadastro = @DATACADASTRO
-                                        WHERE Usuarios.id = @id";
+                command.Transaction = transaction;
                 command.Connection = (SqlConnection)_connection;
 
-                command.Parameters.AddWithValue("@NOME", usuario.Nome);
+                command.CommandText = @"EXECUTE [sp].[AtualizarUsuario] @id, @Nome, @Email, @Sexo, @RG, @CPF, @NomeMae, @SituacaoCadastro, @DataCadastro";
+
+                command.Parameters.AddWithValue("@Nome", usuario.Nome);
                 command.Parameters.AddWithValue("@Email", usuario.Email);
                 command.Parameters.AddWithValue("@Sexo", usuario.Sexo);
                 command.Parameters.AddWithValue("@RG", usuario.RG);
@@ -250,8 +254,95 @@ namespace eCommerce.API.Repositories
 
                 command.Parameters.AddWithValue("@id", usuario.Id);
 
-                _connection.Open();
                 command.ExecuteNonQuery();
+                #endregion
+
+                #region Contatos
+                command = new SqlCommand();
+                command.Transaction = transaction;
+                command.Connection = (SqlConnection)_connection;
+
+                command.CommandText = @"UPDATE Contatos SET Telefone = @Telefone, Celular = @Celular WHERE Id = @Id and UsuarioId = @UsuarioId";
+                command.Parameters.AddWithValue("@UsuarioId", usuario.Id);
+                command.Parameters.AddWithValue("@Telefone", usuario.Contatos.Telefone);
+                command.Parameters.AddWithValue("@Celular", usuario.Contatos.Celular);
+
+                command.Parameters.AddWithValue("@Id", usuario.Contatos.Id);
+
+                command.ExecuteNonQuery();
+                #endregion
+
+                #region EnderecosEntrega
+                //command.CommandText = @"DELETE FROM EnderecosEntrega WHERE UsuarioId = @UsuarioId";
+
+                //command.ExecuteNonQuery();
+
+                foreach (var endereco in usuario.EnderecoEntregas)
+                {
+                    command = new SqlCommand();
+                    command.Connection = (SqlConnection)_connection;
+                    command.Transaction = transaction;
+
+                    command.CommandText = @"UPDATE EnderecosEntrega " +
+                                           "SET NomeEndereco = @NomeEndereco, CEP = @CEP, Estado = @Estado, Cidade = @Cidade, " +
+                                           "Bairro = @Bairro, Endereco = @Endereco, Numero = @Numero, Complemento = @Complemento " +
+                                           "FROM EnderecosEntrega ee where ee.UsuarioId = @UsuarioId and ee.Id = @Id";
+
+                    //command.CommandText = @"EXECUTE [sp].[CadastroEnderecoEntrega] @UsuarioId, @NomeEndereco, @CEP, @Estado, @Cidade " +
+                    //                       ",@Bairro  ,@Endereco  ,@Numero  ,@Complemento " +
+                    //                       "SELECT CAST(scope_identity() AS int)";                    
+                    command.Parameters.AddWithValue("@NomeEndereco", endereco.NomeEndereco);
+                    command.Parameters.AddWithValue("@CEP", endereco.Cep);
+                    command.Parameters.AddWithValue("@Estado", endereco.Estado);
+                    command.Parameters.AddWithValue("@Cidade", endereco.Cidade);
+                    command.Parameters.AddWithValue("@Bairro", endereco.Bairro);
+                    command.Parameters.AddWithValue("@Endereco", endereco.Endereco);
+                    command.Parameters.AddWithValue("@Numero", endereco.Numero);
+                    command.Parameters.AddWithValue("@Complemento", endereco.Complemento);
+
+                    command.Parameters.AddWithValue("@UsuarioID", usuario.Id);
+                    command.Parameters.AddWithValue("@Id", endereco.Id);
+
+                    //endereco.Id = (int)command.ExecuteScalar();
+                    //endereco.UsuarioId = usuario.Id;
+                    command.ExecuteNonQuery();
+                }
+                #endregion
+
+                #region Departamentos
+                //command.CommandText = @"DELETE FROM UsuariosDepartamentos WHERE UsuarioId = @UsuarioId";
+
+                //command.ExecuteNonQuery();
+
+                foreach (var departamento in usuario.Departamentos)
+                {
+                    command = new SqlCommand();
+                    command.Connection = (SqlConnection)_connection;
+                    command.Transaction = transaction;
+
+                    command.CommandText = @"UPDATE UsuariosDepartamentos SET DepartamentoId = @DepartamentoId " +
+                                           "FROM UsuariosDepartamentos ud WHERE ud.UsuarioId = @UsuarioId AND ud.Id = @UsuarioDepartamentoId; " +
+                                           "SELECT CAST(scope_identity() AS int);";
+
+                    command.Parameters.AddWithValue("@UsuarioId", usuario.Id);
+                    command.Parameters.AddWithValue("@UsuarioDepartamentoId", departamento.UsuarioDepartamentoId);
+                    command.Parameters.AddWithValue("@DepartamentoId", departamento.Id);
+
+                    command.ExecuteNonQuery();
+                }
+                #endregion
+                transaction.Commit();
+            }
+            catch (Exception ex)
+            {
+                {
+                    try
+                    {
+                        transaction.Rollback();
+                    }
+                    catch (Exception) { }
+                    throw new Exception("Erro ao tentar atulizar os dados");
+                }
             }
             finally
             {
@@ -260,15 +351,27 @@ namespace eCommerce.API.Repositories
         }
         public void DeleteUsuario(int id)
         {
+            _connection.Open();
+            SqlTransaction transaction = (SqlTransaction)_connection.BeginTransaction();
             try
             {
                 SqlCommand command = new SqlCommand();
-                command.CommandText = "DELETE FROM Usuarios WHERE Id = @Id";
-                command.Parameters.AddWithValue("@Id", id);
+                command.Transaction = transaction;
                 command.Connection = (SqlConnection)_connection;
 
-                _connection.Open();
+                command.CommandText = "DELETE FROM Usuarios WHERE Id = @Id";
+                command.Parameters.AddWithValue("@Id", id);
+                                                
                 command.ExecuteNonQuery();
+
+                transaction.Commit();
+            }catch (Exception ex)
+            {
+                try
+                {
+                    transaction.Rollback();
+                }catch(Exception) { }
+                throw new Exception("Erro ao tentar excluir Usuario!!");
             }
             finally
             {
