@@ -55,7 +55,7 @@ namespace eCommerce.API.Repositories
                 command.Parameters.AddWithValue("@Id", contato.Id);
 
                 SqlDataReader dataReader = command.ExecuteReader();
-                
+
                 contato.Id = contato.Id;
                 contato.UsuarioId = dataReader.GetInt32("UsuarioId");
                 contato.Telefone = dataReader.GetString("Telefone");
@@ -71,7 +71,38 @@ namespace eCommerce.API.Repositories
 
         public void InsertContato(Contato contato)
         {
-            throw new NotImplementedException();
+            _connection.Open();
+            SqlTransaction transaction = (SqlTransaction)_connection.BeginTransaction();
+            try
+            {
+                SqlCommand command = new SqlCommand();
+                command.Transaction = transaction;
+                command.Connection = (SqlConnection)_connection;
+
+                command.CommandText = @"EXEC sp.CadastrarContato @UsuarioId, @Telefone, @Celular" + " SELECT CAST(scope_identity() AS int)";
+
+                command.Parameters.AddWithValue("@UsuarioId", contato.UsuarioId);
+                command.Parameters.AddWithValue("@Telefone", contato.Telefone);
+                command.Parameters.AddWithValue("@Celular", contato.Celular);
+
+                contato.Id = (int)command.ExecuteScalar();
+                //command.ExecuteNonQuery();
+
+                transaction.Commit();
+            }
+            catch (Exception ex)
+            {
+                try
+                {
+                    transaction.Rollback();
+                }
+                catch (Exception) { }
+                throw new Exception("Erro ao tentar cadastrar contato!!");
+            }
+            finally
+            {
+                _connection.Close();
+            }
         }
 
         public void UpdateContato(Contato contato)
