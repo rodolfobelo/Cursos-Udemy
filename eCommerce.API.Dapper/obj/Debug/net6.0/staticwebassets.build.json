@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "FUSVmPXFCFNykjRIXUnG4fM53pkeSf95HkAQIQpCdeg=",
+  "Source": "eCommerce.API.Dapper",
+  "BasePath": "_content/eCommerce.API.Dapper",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
