@@ -1,47 +1,40 @@
 ﻿using eCommerce.API.Dapper.Models;
+using System.Data;
+using System.Data.SqlClient;
+using Dapper;
 
 namespace eCommerce.API.Dapper.Repositories
 {
     public class UsuarioRepository : IUsuarioRepository
     {
-        public static List<Usuario> _db = new List<Usuario>
+        ConexaoBD conexaoBD = new ConexaoBD();
+        private IDbConnection _connection;
+        public UsuarioRepository()
         {
-            new Usuario() { Id = 1, Nome = "Filipe Rodrigues", Email = "felipe.rodrigues@gmail.com"}
-        };
+            _connection = new SqlConnection(conexaoBD.localeCommerce());
+        }
         public List<Usuario> Get()
         {
-            return _db;
+            return _connection.Query<Usuario>("SELECT * FROM Usuarios").ToList();
         }
 
-        public Usuario Get(int Id)
+        public Usuario Get(int id)
         {
-            return _db.FirstOrDefault(x => x.Id == Id);
+            return _connection.QuerySingleOrDefault<Usuario>("SELECT * FROM Usuarios WHERE id = @Id", new { Id = id });
         }
 
         public void Insert(Usuario usuario)
         {
-            var lastUser = _db.LastOrDefault();
-            if(lastUser == null)
-            {
-                usuario.Id = 1;
-            }
-            else
-            {                
-                usuario.Id = lastUser.Id;
-                usuario.Id++;
-                
-            }
-            _db.Add(usuario);
+
         }
 
         public void Update(Usuario usuario)
         {
-            _db.Remove(_db.FirstOrDefault(x => x.Id == usuario.Id));
-            _db.Add(usuario);
+
         }
         public void Delete(int Id)
         {
-            _db.Remove(_db.FirstOrDefault(x => x.Id == Id));
+
         }
     }
 }
