@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "i1acxDKHoFCdV3YK/FCHVOSIIhGT785WjHxjZkjqd/3Zhe0yqcvyFrHZHZKMiFiuFfkPizq8wPypksS+dl4arw==",
+  "dgSpecHash": "CPJ6saZg01+9VDi3drlLdzjuwsxCXCOPJ76diql51DtQfWT90IOHOBl3tSOl7dAWNXVOxOWi5RSYR7N03rFxsw==",
   "success": true,
-  "projectFilePath": "C:\\GitHubFiles\\CursosUdemy\\eCommerce.API.Dapper\\eCommerce.API.Dapper.csproj",
+  "projectFilePath": "C:\\GitHubFiles\\Cursos\\eCommerce.API.Dapper\\eCommerce.API.Dapper.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\rodol\\.nuget\\packages\\dapper\\2.0.123\\dapper.2.0.123.nupkg.sha512",
     "C:\\Users\\rodol\\.nuget\\packages\\microsoft.extensions.apidescription.server\\3.0.0\\microsoft.extensions.apidescription.server.3.0.0.nupkg.sha512",

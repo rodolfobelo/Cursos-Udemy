@@ -11,11 +11,11 @@ namespace eCommerce.API.Dapper.Repositories
         private IDbConnection _connection;
         public PPessoaRepository()
         {
-            _connection = new SqlConnection(conexaoBD.localEXEMPLO_12134());
+            _connection = new SqlConnection(conexaoBD.unifametroConectionHomol());
         }
         public List<PPessoa> Get()
         {
-            return _connection.Query<PPessoa>("select top 10 CODIGO, NOME, CPF from ppessoa").ToList();
+            return _connection.Query<PPessoa>("select top 10 CODIGO, NOME, CPF from ppessoa where nome = 'rodolfo freire belo'").ToList();
         }
 
         public PPessoa Get(int Codigo)

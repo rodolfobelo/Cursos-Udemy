@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Vx3m0P1WC7bISOPneo+x8ruJOOfO7xjTDdpqYqzfBqGuqr+LvnrAjGAKY72gbKaqBlzJhWQLuw0P5qlMgyq4Nw==",
+  "dgSpecHash": "huaXNfMYy00l9aArBBS2KBOS/7NdzDY07s/XoaOHW3XPd9C1Sgs3pC4GktxwojfX/qdGtVHwKG571BbFafyj1g==",
   "success": true,
-  "projectFilePath": "D:\\GitHub\\CursosUdemy\\eCommerce.API\\eCommerce.API.csproj",
+  "projectFilePath": "C:\\GitHubFiles\\Cursos\\eCommerce.API\\eCommerce.API.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\rodol\\.nuget\\packages\\google.protobuf\\3.18.0\\google.protobuf.3.18.0.nupkg.sha512",
     "C:\\Users\\rodol\\.nuget\\packages\\grpc.aspnetcore\\2.40.0\\grpc.aspnetcore.2.40.0.nupkg.sha512",

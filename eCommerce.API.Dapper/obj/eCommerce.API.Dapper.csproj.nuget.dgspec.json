@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\GitHubFiles\\CursosUdemy\\eCommerce.API.Dapper\\eCommerce.API.Dapper.csproj": {}
+    "C:\\GitHubFiles\\Cursos\\eCommerce.API.Dapper\\eCommerce.API.Dapper.csproj": {}
   },
   "projects": {
-    "C:\\GitHubFiles\\CursosUdemy\\eCommerce.API.Dapper\\eCommerce.API.Dapper.csproj": {
+    "C:\\GitHubFiles\\Cursos\\eCommerce.API.Dapper\\eCommerce.API.Dapper.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\GitHubFiles\\CursosUdemy\\eCommerce.API.Dapper\\eCommerce.API.Dapper.csproj",
+        "projectUniqueName": "C:\\GitHubFiles\\Cursos\\eCommerce.API.Dapper\\eCommerce.API.Dapper.csproj",
         "projectName": "eCommerce.API.Dapper",
-        "projectPath": "C:\\GitHubFiles\\CursosUdemy\\eCommerce.API.Dapper\\eCommerce.API.Dapper.csproj",
+        "projectPath": "C:\\GitHubFiles\\Cursos\\eCommerce.API.Dapper\\eCommerce.API.Dapper.csproj",
         "packagesPath": "C:\\Users\\rodol\\.nuget\\packages\\",
-        "outputPath": "C:\\GitHubFiles\\CursosUdemy\\eCommerce.API.Dapper\\obj\\",
+        "outputPath": "C:\\GitHubFiles\\Cursos\\eCommerce.API.Dapper\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\rodol\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -71,7 +71,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.203\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.300\\RuntimeIdentifierGraph.json"
         }
       }
     }
