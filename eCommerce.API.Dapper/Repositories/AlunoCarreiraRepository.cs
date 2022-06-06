@@ -15,23 +15,20 @@ namespace eCommerce.API.Dapper.Repositories
             _connection = new SqlConnection(conexaoBD.unifametroConectionHomol());
         }
 
-        public List<AlunoCarreira> Get(string tipo)
+        public List<AlunoCarreira> Get()
         {
-            if (tipo == "Alunos")
-            {
-                return _connection.Query<AlunoCarreira>("SELECT * FROM FN_DadosPortalValorizza_RA ('%')").ToList();
-            }
-            else
-                return null;
+            //if (tipo == "Alunos")
+            //{
+            return _connection.Query<AlunoCarreira>("SELECT * FROM FN_DadosPortalValorizza_RA ('%')").ToList();
+            //}
+            //else
+            //    return null;
         }
 
-        public AlunoCarreira Get(string ra, string tipo)
+        public AlunoCarreira Get(string ra)
         {
-            if (tipo == "Alunos")
-            {
-                return _connection.QuerySingleOrDefault<AlunoCarreira>("SELECT * FROM FN_DadosPortalValorizza_RA (@Ra)", new { Ra = ra });
-            }else
-                return null;
+            //return _connection.QuerySingleOrDefault<AlunoCarreira>("SELECT * FROM FN_DadosPortalValorizza_RA ('%')", new { Ra = ra });
+            return _connection.QuerySingleOrDefault<AlunoCarreira>("SELECT * FROM SALUNO WHERE RA = @Ra", new { Ra = ra });
         }
 
         public void Insert(AlunoCarreira AlunoCarreira)
