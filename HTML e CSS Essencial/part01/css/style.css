@@ -1,0 +1,48 @@
+* {
+    margin: 0;
+    border: 0;
+    padding: 0;
+}
+
+#imagem-topo {
+    background-color: #ADD8E6;
+    text-align: center;
+}
+
+p {
+    padding: 25px;
+    text-align: justify;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+}
+
+h1,
+h2 {
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    color: #4169E1;
+}
+
+h3 {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+footer {
+    background-color: #ADD8E6;
+    text-align: center;
+}
+
+img {
+    width: 50%;
+    height: 50%;
+}
+
+.contato {
+    font-size: 0.85em;
+}
+
+.cliente {
+    text-align: center;
+    color: #B0C4DE;
+    font-family: Arial, Helvetica, sans-serif;
+}

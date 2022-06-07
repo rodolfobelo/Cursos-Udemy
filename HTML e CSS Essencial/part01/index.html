@@ -7,24 +7,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TecTreinamentos Informatica</title>
-    <style type="text/css">
-
-        * {
-            margin: 0;
-            border: 0;
-            padding: 10px;
-        }
-        #imagem-topo {
-            background-color: #ADD8E6;
-            text-align: center;
-        }
-
-        footer {
-            background-color: #ADD8E6;
-            text-align: center;
-        }
-    </style>
-
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script type="text/javascript">
+        var cliente = prompt("Por favor insira o seu nome (Opcional)")
+    </script>
 </head>
 
 <body>
@@ -33,6 +19,12 @@
     </figure>
 
     <h1>Análise e Desenvolvimento de Sistemas</h1>
+
+    <p class="cliente">
+        <script type="text/javascript">
+            document.write("Olá Sr(a) " + cliente + ", seja bem vindo(a)!!!")
+        </script>
+    </p>
 
     <h2>O que faz um(a) analista de Sistemas!</h2>
 
@@ -73,9 +65,9 @@
         <h2>TECTREINAMENTOS INFORMÁTICA LTDA</h2>
 
         <h3>CONTATOS:</h2>
-        <p>contato@tectreinamentoscursos.com.br</p>
-        <p>whats (11)9835-1234</p>
-        <p>CNPJ: 00.000.000.0001-00</p>
+            <p class="contato">contato@tectreinamentoscursos.com.br</p>
+            <p class="contato">whats (11)9835-1234</p>
+            <p>CNPJ: 00.000.000.0001-00</p>
     </footer>
 </body>
 
