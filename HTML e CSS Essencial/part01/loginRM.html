@@ -1,0 +1,22 @@
+<html>
+<head>
+<title>Login externo - Novo Portal do Aluno</title>
+</head>
+<!-- ATENÇÃO PARA PREENCHER O ENDEREÇO CORRETO NA PROPRIEDADE ACTION DO FORMULÁRIO -->
+<body>
+<form name="login" id="login" method="post" action="portal.unifametro.edu.br/Corpore.Net/Source/EDU-EDUCACIONAL/Public/EduPortalAlunoLogin.aspx?AutoLoginType=ExternalLogin">
+<label for="UserName">Usuário:</label>
+<!-- USUÁRIO PARA LOGIN -->
+<input type="text" name="user" value=""/>
+<br>
+<label for="Password">Senha:</label>
+<!-- SENHA PARA LOGIN -->
+<input type="password" name="pass" value=""/>
+<br>
+<!-- AQUI DEVE SER COLOCADO O ALIAS A SER UTILIZADO -->
+<input type="text" name="alias" value="CorporeRM" style="display:none"/>
+<br>
+<input type="submit" value="Enviar"/>
+</form>
+</body>
+</html>
