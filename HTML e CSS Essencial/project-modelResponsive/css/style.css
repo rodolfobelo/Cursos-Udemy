@@ -2,36 +2,35 @@
     margin: 0;
     border: 0;
     padding: 0;
+    
 }
 
 html {
     font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
     font-size: 92.5%;
+    
 }
 
 header {
     background-color: rgba(0, 0, 0, 1);
     color: #fff;
-    padding: 10px;
-    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;    
+    /* padding: 10px;     */
+    position: fixed;
+    width: 100%;
+}
+header h3 {
+    text-align: left;
+    font-weight: bold;    
+}
+header h4 {
+    text-align: left;
+    font-weight: bold;
+    font-size: 0.8rem;
+    margin-left: 10px;
 }
 
 body {
-    background-color: rgba(255, 255, 255, 1);
-}
-
-.container {
-    display: block;
-    background-color: #fff;
-    width: 95%;
-    box-shadow: 2px 2px #808080;
-    margin: 0 auto;
-    max-width: 85%;
-    min-width: 50%;
-    /* padding-left: 5px; */
-}
-.container h1 {
-    text-align: center;
+    background-color: rgba(169, 169, 169, 1.0);
 }
 
 footer {
@@ -47,6 +46,82 @@ footer {
 footer p {
     text-align: center;
     font-size: 0.9rem;
+}
+
+.container {
+    display: block;
+    background-color: #fff;
+    width: 95%;
+    box-shadow: 2px 2px #808080;
+    margin: 0 auto;
+    max-width: 85%;
+    min-width: 50%;
+    margin-top: 50px;
+    /* padding-left: 5px; */
+}
+.container h1 {
+    text-align: center;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-gap: 1px;
+    max-width: 1200px;
+    /* min-width: 500px; */
+    margin: 0 auto;
+
+}
+.grid div {
+    background-color: #fff;
+    text-align: center;
+    font-size: 1.6rem;
+}
+
+.compre {
+    background-color: rgba(255, 255, 0, 1.0);
+    width: 150px;
+    height: 100px;
+    position: fixed;
+    right: 0;
+    text-align: right;
+    margin-top: 10%;
+}
+
+.compre h4 {    
+    font-size: 0.8rem;
+}
+
+.formulario-contato {
+    font-size: 1.8rem;
+    padding: 10px;
+    text-align: left;
+    margin-left: 5%;
+    font-weight: bold;
+}
+
+.formulario-contato input {
+    font-family: sans-serif;
+    font-size: 1.7rem;
+}
+
+#grid-container {
+    margin-top: 5px;
+    background-color: rgba(255, 127, 80);
+
+}
+
+#formulario {
+    background-color: rgba(100, 149, 237, 1.0);
+}
+
+nav {
+    text-align: right;
+    margin-top: 10px;
+    font-weight: bold;
+    font-size: 1.6rem;
+    margin-right: 2%;
+    word-spacing: 10px;
 }
 
 p {
@@ -77,4 +152,28 @@ h4 {
     margin: 0;
     font-size: 1.1rem;
     padding-bottom: 5px;
+}
+
+h5 {
+    text-align: center;
+    padding: 1px;
+    font-size: 1.9rem;
+}
+
+button {
+    text-align: center;
+    padding-top: 2px;
+    font-size: 1.9rem;
+    background-color: rgba(50, 205, 50, 1.0);
+    color: #fff;
+    border: solid;
+}
+
+a {
+    text-decoration: none;
+    color: rgba(255, 255, 255, 1.0);
+    transition: all 400ms ease-in-out;
+}
+a:hover {
+    color: rgba(169, 169, 169, 1.0);
 }
