@@ -8,6 +8,8 @@
 html {
     font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
     font-size: 92.5%;    
+    scroll-behavior: smooth; /* Suavidade na navegação de links Ancora */
+    
 }
 
 header {
