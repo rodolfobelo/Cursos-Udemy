@@ -1,21 +1,22 @@
-* {    
+* {
     margin: 0;
     border: 0;
-    padding: 0;    
+    padding: 0;
 }
 
 html {
     font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
-    font-size: 62.5%;    
-    scroll-behavior: smooth; /* Suavidade na navegação de links Ancora */
-    
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+    /* Suavidade na navegação de links Ancora */
+
 }
 
 header {
     background-color: rgba(0, 0, 0, 1);
     color: #fff;
     width: 100%;
-    position: fixed;    
+    position: fixed;
 }
 
 
@@ -24,6 +25,7 @@ h3 {
     margin: 0;
     padding: 5px;
 }
+
 h4 {
     font-size: 1rem;
     margin: 0;
@@ -38,7 +40,7 @@ body {
 footer {
     background-color: rgba(0, 0, 0, 1);
     color: #F5F5F5;
-    text-align: center;    
+    text-align: center;
     /* box-shadow: 2px 2px #808080; */
     margin: 0 auto;
     /* max-width: 35%;
@@ -67,16 +69,19 @@ p {
     /* margin-top: 50px; */
     /* padding-left: 5px; */
 }
+
 .container h1 {
     text-align: center;
     font-size: 1.9rem;
 }
+
 .container h2 {
     font-size: 1.7rem;
     /* padding-left: 25px; */
     text-align: center;
     /* font-weight: bold; */
 }
+
 .container h3 {
     font-size: 1.5rem;
     /* padding-left: 25px; */
@@ -92,6 +97,7 @@ p {
     /* min-width: 500px; */
     margin: 0 auto;
 }
+
 .grid div {
     background-color: #fff;
     text-align: center;
@@ -99,16 +105,19 @@ p {
     padding-bottom: 10px;
     box-shadow: 0.9px 0.9px #000000;
 }
+
 .imagem-grid {
     height: 12rem;
     width: 20rem;
     border-radius: 40%;
 }
+
 .texto-grid {
     text-align: center;
     font-size: 1.1rem;
     font-weight: bold;
 }
+
 .link-grid {
     background-color: #000000;
     border-radius: 20%;
@@ -127,7 +136,7 @@ p {
     margin-top: 10%;
 }
 
-.compre h4 {    
+.compre h4 {
     font-size: 0.8rem;
 }
 
@@ -147,13 +156,14 @@ p {
     /* width: 1000px; */
 }
 
-.sobre-perfil{
+.sobre-perfil {
     max-width: 10px;
     padding: 10px;
     font-size: 1rem;
     text-align: center;
 }
-#fotoPerfil {    
+
+#fotoPerfil {
     height: 15rem;
     width: 15rem;
     border-radius: 100%;
@@ -162,7 +172,7 @@ p {
 
 #grid-container {
     margin-top: 5px;
-    background-color: rgba(220,220,220, 1.0);
+    background-color: rgba(220, 220, 220, 1.0);
     padding: 5px;
 }
 
@@ -170,6 +180,7 @@ p {
     background-color: rgba(100, 149, 237, 1.0);
     box-shadow: 3px 3px #000000;
 }
+
 #enviar {
     background-color: rgba(0, 0, 128, 1.0);
     color: #fff;
@@ -178,8 +189,9 @@ p {
     width: 100px;
     box-shadow: 3px 3px #000000;
 }
+
 #limpar {
-    background-color: rgba(178,34,34, 1.0);
+    background-color: rgba(178, 34, 34, 1.0);
     color: #fff;
     border-radius: 50%;
     padding: 1%;
@@ -189,14 +201,28 @@ p {
 
 nav {
     text-align: right;
+    margin-right: 2%;
     margin-top: 10px;
     font-weight: bold;
     font-size: 1.6rem;
-    margin-right: 2%;
     word-spacing: 10px;
 }
 
-h1, h2, h3, h4 {    
+@media(min-width: 320px) and (max-width: 450px) {
+    nav {
+        text-align: center;
+        
+        margin-top: 10px;
+        font-weight: bold;
+        font-size: 1.6rem;
+        word-spacing: 15px;
+    }
+}
+
+h1,
+h2,
+h3,
+h4 {
     padding-top: 20px;
 }
 
@@ -238,11 +264,13 @@ a {
     color: rgba(255, 255, 255, 1.0);
     transition: all 400ms ease-in-out;
 }
+
 a:hover {
     color: rgba(169, 169, 169, 1.0);
 }
 
-ul, li {
+ul,
+li {
     font-size: 1.6rem;
     text-align: left;
     margin-left: 30px;
