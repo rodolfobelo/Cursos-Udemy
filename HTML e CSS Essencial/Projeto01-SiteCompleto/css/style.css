@@ -1,13 +1,12 @@
 * {    
     margin: 0;
     border: 0;
-    padding: 0;
-    
+    padding: 0;    
 }
 
 html {
     font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
-    font-size: 92.5%;    
+    font-size: 62.5%;    
     scroll-behavior: smooth; /* Suavidade na navegação de links Ancora */
     
 }
@@ -15,23 +14,25 @@ html {
 header {
     background-color: rgba(0, 0, 0, 1);
     color: #fff;
-    /* padding: 10px;     */
-    position: fixed;
     width: 100%;
+    position: fixed;    
 }
-header h3 {
-    text-align: left;
-    font-weight: bold;    
+
+
+h3 {
+    font-size: 1.9rem;
+    margin: 0;
+    padding: 5px;
 }
-header h4 {
-    text-align: left;
-    font-weight: bold;
-    font-size: 0.8rem;
-    margin-left: 10px;
+h4 {
+    font-size: 1rem;
+    margin: 0;
+    padding-left: 5px;
+    padding-bottom: 5px;
 }
 
 body {
-    background-color: rgba(169, 169, 169, 1.0);
+    background-color: rgba(245, 245, 245, 1.0);
 }
 
 footer {
@@ -47,6 +48,12 @@ footer {
 footer p {
     text-align: center;
     font-size: 0.9rem;
+}
+
+p {
+    text-align: justify;
+    padding: 10px;
+    font-size: 1.6rem;
 }
 
 .container {
@@ -66,6 +73,12 @@ footer p {
 }
 .container h2 {
     font-size: 1.7rem;
+    /* padding-left: 25px; */
+    text-align: center;
+    /* font-weight: bold; */
+}
+.container h3 {
+    font-size: 1.5rem;
     /* padding-left: 25px; */
     text-align: center;
     /* font-weight: bold; */
@@ -133,6 +146,13 @@ footer p {
     /* height: auto; */
     /* width: 1000px; */
 }
+
+.sobre-perfil{
+    max-width: 10px;
+    padding: 10px;
+    font-size: 1rem;
+    text-align: center;
+}
 #fotoPerfil {    
     height: 15rem;
     width: 15rem;
@@ -174,12 +194,6 @@ nav {
     font-size: 1.6rem;
     margin-right: 2%;
     word-spacing: 10px;
-}
-
-p {
-    text-align: justify;
-    padding: 10px;
-    font-size: 1.6rem;
 }
 
 h1, h2, h3, h4 {    
@@ -226,4 +240,11 @@ a {
 }
 a:hover {
     color: rgba(169, 169, 169, 1.0);
+}
+
+ul, li {
+    font-size: 1.6rem;
+    text-align: left;
+    margin-left: 30px;
+    padding-bottom: 10px;
 }
