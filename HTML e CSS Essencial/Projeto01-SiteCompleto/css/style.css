@@ -161,6 +161,11 @@ footer p {
     height: 12rem;
     width: 20rem;
     border-radius: 40%;
+    transition: 300ms ease-in-out;
+}
+img:hover {
+    transform: scale(0.3) rotate(-5deg);
+    border: solid rgba(255, 255, 255, 1.0);
 }
 
 .texto-grid {
