@@ -67,8 +67,9 @@ footer h4 {
     max-height: 90%;
     min-width: 0;
     min-height: 0;
-    margin-top: 40px;
+    margin-top: 3%;
 }
+@media(min-width)
 
 .texto-footer {
     text-align: center;
@@ -78,25 +79,27 @@ footer h4 {
     padding-bottom: 10px;
 }
 
-a.compra-office {
-    text-decoration: none;
-    /* color: rgba(0, 0, 0, 1); */
-    transition: all 300ms ease-in-out;
-}
-a.compra-office:hover {
-    color: rgba(255, 255, 0);
-}
-
 p.compra-office {
     text-align: center;
     font-weight: bold;
-    background-color: rgba(34, 122, 34, 0.55);
+    
+    background-color: rgba(29, 33, 27, 0.55);
     width: 50%;
     margin: 0 auto;
     font-size: 30px;
     border-radius: 30px;
     border: solid rgba(0, 255, 0, 0.55);
     text-shadow: 2px 2px 5px #000;
+}
+
+a.compra-office {
+    text-decoration: none;
+    color: #fff;
+    /* color: rgba(0, 0, 0, 1); */
+    transition: all 300ms ease-in-out;
+}
+a.compra-office:hover {
+    color: rgba(255, 255, 0);
 }
 
 div.video {
