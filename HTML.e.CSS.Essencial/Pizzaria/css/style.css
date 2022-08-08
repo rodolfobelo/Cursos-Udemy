@@ -20,7 +20,7 @@ header {
 
 @media(min-width: 320px) and (max-width: 450px) {
     header {
-        text-align: center;
+        text-align: left;
     }
 }
 
@@ -101,6 +101,25 @@ h2 {
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 1.0);
 }
 
+@media(min-width: 320px) and (max-width: 450px) {
+    h1 {
+        font-family: candara, candara, arial;
+        text-align: left;
+        padding-top: 10px;
+        font-size: 3rem;
+        color: rgba(255, 0, 0, 1.0);
+        text-shadow: 2px 2px 3px #000;
+    }
+    h2 {
+        font-family: candara, candara, arial;
+        text-align: center;
+        padding-top: 10px;
+        font-size: 3rem;
+        color: rgba(255, 0, 0, 1.0);
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 1.0);
+    }
+}
+
 .texto-footer {
     text-align: center;
     font-family: candara, candara, arial;
@@ -120,7 +139,7 @@ h2 {
     padding: 20px;
     z-index: 1;
     border-radius: 10px;
-    border: solid #fff;
+    border: solid 3px #fff;
 }
 
 .compre h5 {
@@ -140,11 +159,46 @@ h2 {
     color: #fff;
     border: solid 1px;
     border-radius: 35px;
-    margin-top: 7px;
+    margin-top: 11px;
 }
 
 .compre button:hover {
     box-shadow: 1px 1px 30px rgba(200, 0, 0, 1);
+}
+
+@media(min-width: 320px) and (max-width: 450px) {
+    .compre {
+        background-color: rgba(255, 255, 0, 0.9);
+        width: 35%;
+        height: 6%;
+        right: 0;
+        position: fixed;
+        text-align: center;
+        margin-top: 3%;
+        padding: 15px;
+        padding-top: 0px;
+        z-index: 1;
+        border-radius: 10px;
+        border: solid 3px #fff;
+    }
+    .compre button {
+        font-family: candara, arial;
+        text-align: center;
+        width: 100%;
+        padding: 5px;
+        font-size: 1.9rem;
+        background-color: rgba(50, 205, 50, 1.0);
+        color: #fff;
+        border: solid 1px;
+        border-radius: 35px;
+        margin-top: 7px;
+    }
+    .compre h5 {
+        font-family: candara, arial;
+        text-align: center;
+        padding: 1px;
+        font-size: 1.3rem;
+    }
 }
 
 #grid-container {
