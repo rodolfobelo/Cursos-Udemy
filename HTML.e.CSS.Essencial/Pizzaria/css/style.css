@@ -59,6 +59,7 @@ body {
 .container img {
     transition: 300ms ease-in-out;
 }
+
 .container img:hover {
     transform: scale(1.3);
     border: solid rgba(255, 255, 255, 0.0);
@@ -95,7 +96,9 @@ h2 {
     font-family: candara, candara, arial;
     text-align: center;
     padding-top: 10px;
-    font-size: 1.9rem;
+    font-size: 2.3rem;
+    color: rgba(255, 0, 0, 1.0);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 1.0);
 }
 
 .texto-footer {
@@ -107,31 +110,41 @@ h2 {
 }
 
 .compre {
-    background-color: rgba(255, 255, 0, 1.0);
-    width: 150px;
-    height: 100px;
-    position: fixed;
+    background-color: rgba(255, 255, 0, 0.9);
+    width: 17rem;
+    height: 6rem;
     right: 0;
+    position: fixed;
     text-align: center;
-    margin-top: 10%;
+    margin-top: 3%;
+    padding: 20px;
     z-index: 1;
+    border-radius: 10px;
+    border: solid #fff;
 }
 
-h5 {
+.compre h5 {
     font-family: candara, arial;
     text-align: center;
     padding: 1px;
-    font-size: 1.9rem;
+    font-size: 1.5rem;
 }
 
-button {
+.compre button {
     font-family: candara, arial;
     text-align: center;
+    width: 100%;
     padding: 5px;
     font-size: 1.9rem;
     background-color: rgba(50, 205, 50, 1.0);
     color: #fff;
-    border: solid;
+    border: solid 1px;
+    border-radius: 35px;
+    margin-top: 7px;
+}
+
+.compre button:hover {
+    box-shadow: 1px 1px 30px rgba(200, 0, 0, 1);
 }
 
 #grid-container {
@@ -147,6 +160,15 @@ button {
     max-width: 1200px;
     margin: 0 auto;
 
+}
+
+.grid p {
+    font-family: candara, candara, arial;
+    text-align: center;
+    padding: 10px;
+    font-size: 1.6rem;
+    color: rgba(255, 0, 0, 1);
+    text-shadow: 1px 1px 3px #000;
 }
 
 .grid div {
@@ -207,20 +229,6 @@ a {
     transition: all 300ms ease-in-out;
 }
 
-a:hover {
-    color: rgba(255, 255, 0);
-}
-
-#enviar {
-    background-color: rgba(60, 179, 113);
-    box-shadow: 3px 3px #000;
-}
-
-#limpar {
-    background-color: rgba(178, 34, 34);
-    box-shadow: 3px 3px #000;
-}
-
 .imagem-grid {
     width: 18rem;
     height: 10rem;
@@ -236,7 +244,6 @@ a:hover {
 }
 
 .link-grid {
-
     font-weight: bold;
     font-size: 1.8rem;
     background-color: #000;
@@ -245,12 +252,12 @@ a:hover {
 }
 
 #professor {
-        width: 20rem;
-        height: 20rem;
+    width: 20rem;
+    height: 20rem;
     border-radius: 50%;
     padding: 30px;
-
 }
+
 ul,
 li {
     font-size: 1.6rem;
@@ -261,13 +268,13 @@ li {
 }
 
 .imagem-grid {
-    transition: 300ms ease-in-out;
+    transition: 100ms ease-in-out;
 }
 
 img:hover {
-    transform: scale(1.3);
-    border: solid rgba(255, 255, 255, 1.0);
-    box-shadow: 1px 1px 3px #000;
+    transform: scale(1.9);
+    /* border: solid rgba(200, 0, 0, 1.0); */
+    box-shadow: 1px 1px 30px rgba(200, 0, 0, 1);
 }
 
 #efeito-apliar input {
@@ -276,5 +283,5 @@ img:hover {
 }
 
 #efeito-apliar input:hover {
-    transform: scale(1.10) rotate(0deg);
+    transform: scale(10.10) rotate(0deg);
 }
