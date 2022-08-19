@@ -13,7 +13,8 @@ header {
     background-color: rgb(255, 0, 0);
     color: #fff;
     font-family: candara, candara, arial;
-    width: 100%;
+    width: 10%;
+    height: 15%;
     position: fixed;
     text-shadow: 2px 2px 2px #000;
 }
@@ -21,14 +22,15 @@ header {
 @media(min-width: 320px) and (max-width: 450px) {
     header {
         text-align: left;
+        /* height: 100%; */
     }
 }
 
-h3 {
+header h3 {
     font-size: 2.1rem;
     font-family: candara, candara, arial;
     margin: 0;
-    padding: 5px;
+    /* padding-top: 2%; */
 }
 
 h4 {
@@ -213,7 +215,6 @@ h2 {
     grid-gap: 10px;
     max-width: 1200px;
     margin: 0 auto;
-
 }
 
 .grid p {
@@ -287,7 +288,6 @@ a {
     width: 18rem;
     height: 10rem;
     border-radius: 20px;
-
 }
 
 .texto-grid {
