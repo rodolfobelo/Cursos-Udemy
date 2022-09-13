@@ -27,11 +27,27 @@
                         <li><a href="exercicio.php?dir=basico&file=css">Integração CSS.</a></li>
                         <li><a href="exercicio.php?dir=basico&file=desafio">Desafio.</a></li>
                     </ul>
-                </div>
-                <div class="modulo verde">
+                </div>                
+                <div class="modulo vermelho">
                     <h3>Tipos</h3>
                     <ul>
                         <li><a href="exercicio.php?dir=tipos&file=int">Tipo Inteiro.</a></li>
+                        <li><a href="exercicio.php?dir=tipos&file=float">Tipo Float.</a></li>
+                        <li><a href="exercicio.php?dir=tipos&file=aritmetica">Op. Aritméticos.</a></li>
+                        <li><a href="exercicio.php?dir=tipos&file=desafio">Desafio.</a></li>
+                        <li><a href="exercicio.php?dir=tipos&file=string">Tipo String.</a></li>
+                        <li><a href="exercicio.php?dir=tipos&file=desafio_string">Desafio String.</a></li>
+                        <li><a href="exercicio.php?dir=tipos&file=booleano">Tipo Booleano.</a></li>
+                        <li><a href="exercicio.php?dir=tipos&file=conversoes">Conversões.</a></li>
+                    </ul>
+                </div>
+                <div class="modulo azul">
+                    <h3>Variáveis</h3>
+                    <ul>
+                        <li><a href="exercicio.php?dir=variaveis&file=basico">Variáveis.</a></li>
+                        <li><a href="exercicio.php?dir=variaveis&file=desafio">Desafio.</a></li>
+                        <li><a href="exercicio.php?dir=variaveis&file=atribuicoes">Atribuições.</a></li>
+                        <li><a href="exercicio.php?dir=variaveis&file=Interpolacao">Interpolação.</a></li>
                     </ul>
                 </div>
             </nav>
