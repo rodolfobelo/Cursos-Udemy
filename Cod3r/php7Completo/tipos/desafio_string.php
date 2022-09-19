@@ -2,12 +2,12 @@
 
 <?php
 
+// Enunciado:
+// Avaliando os métodos da documentação da string, 
+// qual o métodos que a posicao do texto 'abc' 
+// na string '!AbcaBcabc' retorne 1?
 
-$str = '!AbcaBcabc';
-$str_procurar = 'abc';
+echo strpos('!AbcaBcabc', 'abc') . '<br>';
+echo stripos('!AbcaBcabc', 'abc') . '<br>';
 
-echo stripos($str, $str_procurar);
-
-if (strpos($str, $str_procurar) !== false){
-    echo '<br> '. 1;
-}
+echo strpos(strtolower('!AbcaBcabc'), strtolower('ABC'));

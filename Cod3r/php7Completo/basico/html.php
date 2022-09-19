@@ -1,12 +1,15 @@
 <div class="titulo">Integração HTML</div>
 
-<H1>
-    <?php 
-        echo 'Olá';
-        echo '<small>';
-        echo ' Mundo!'; 
-        echo '</small>';
-    ?>
-</H1>
+<h1>
+<?php 
+echo 'Olá';
+echo '<small>';
+echo ' Mundo!';
+echo '</small>';
+?>
+</h1>
 
-<div><button><?= "teste"?></button></div>
+<?= "<div>Outra forma de me 'expressar'!</div>" ?>
+
+<br>
+<div><button><?= "Legal" ?></button></div>
