@@ -37,6 +37,26 @@
                             Argumentos Variáveis
                         </a>
                     </li>
+                    <li>
+                        <a href="exercicio.php?dir=funcoes&file=args_padrao">
+                            Argumentos Padrões
+                        </a>
+                    </li>
+                    <li>
+                        <a href="exercicio.php?dir=funcoes&file=usando_tipos">
+                            Usando Tipos
+                        </a>
+                    </li>
+                    <li>
+                        <a href="exercicio.php?dir=funcoes&file=anonimas">
+                            Função Anônima
+                        </a>
+                    </li>
+                    <li>
+                        <a href="exercicio.php?dir=funcoes&file=recursividade">
+                            Recursividade
+                        </a>
+                    </li>
                 </ul>
             </div>
             <div class="modulo verde-escuro">
