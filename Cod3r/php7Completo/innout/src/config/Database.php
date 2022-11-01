@@ -21,7 +21,11 @@ class Database
         return $conn;
     }
 
-    public function teste(){
-        return 'teste';
+    public static function getResultFromQuery($sql)
+    {
+        $conn = self::getConnection();
+        $result = $conn->query($sql);
+        $conn->close();
+        return $result;
     }
 }
