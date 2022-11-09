@@ -4,7 +4,9 @@ require_once(dirname(__FILE__, 2) . '/src/config/Database.php');
 
 Database::getConnection();
 
-$sql = 'select * from users';
+$var = "2, 3, 5";
+
+$sql = "select * from users where id in ( $var )";
 $result = Database::getResultFromQuery($sql);
 
 while ($row = $result->fetch_assoc()){
