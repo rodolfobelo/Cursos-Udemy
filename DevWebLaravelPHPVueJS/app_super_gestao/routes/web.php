@@ -1,5 +1,6 @@
 <?php
 
+use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -27,9 +28,7 @@ Route::prefix('/app')->group(function () {
     Route::get('/clientes', function () {
         return 'Clientes';
     })->name('app.clientes');
-    Route::get('fornecedores', function () {
-        return 'Fornecedores';
-    })->name('app.fornecedores');
+    Route::get('/fornecedores', [\App\Http\Controllers\FornecedorController::class, 'index'])->name('app.fornecedores');
     Route::get('/produtos', function () {
         return 'Produtos';
     })->name('app.produtos');
@@ -38,3 +37,5 @@ Route::prefix('/app')->group(function () {
 Route::fallback(function(){
     echo 'A rota acessada não existe. <a href="'.route('site.index').'">Clique aqui</a> para ir para página inicial';
 });
+
+Route::get('/teste/{p1}/{p2}', [\App\Http\Controllers\TesteController::class, 'teste'])->name('teste');
