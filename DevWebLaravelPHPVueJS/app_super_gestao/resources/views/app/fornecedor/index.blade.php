@@ -15,7 +15,8 @@
     $posicao = 1;*/
 @endphp
     @isset($fornecedores)
-        @for($i = 0; isset($fornecedores[$i]);$i++)
+    @php $i = 0 @endphp
+        @while(isset($fornecedores[$i]))
             Fornecedor: {{ $fornecedores[$i]['nome'] }}
             <br>
             Status: {{ $fornecedores[$i]['status'] }}
@@ -25,5 +26,6 @@
             Telefone Celular: ({{ $fornecedores[$i]['ddd'] ?? 'ddd não informado!' }})
              {{ $fornecedores[$i]['telCelular'] ?? 'ddd não informado!' }}
             <hr>
-        @endfor    
+            @php $i++ @endphp
+        @endwhile
     @endisset
