@@ -29,7 +29,7 @@ class FornecedorController extends Controller
                 'ddd' => 85,
                 'telCelular' => 912456789
             ]
-        ];
+        ];        
 
         return view('app.fornecedor.index', compact('fornecedores'));
     }
