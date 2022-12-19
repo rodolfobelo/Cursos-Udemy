@@ -27,15 +27,13 @@ return new class extends Migration
             $table->unique('produto_id');
         });
     }
-
     /**
      * Reverse the migrations.
      *
      * @return void
      */
     public function down()
-    {
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  
+    {                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  
         Schema::dropIfExists('produto_detalhes');
     }
 };
