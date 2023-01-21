@@ -20,4 +20,4 @@
     <button type="submit" class="borda-preta">ENVIAR</button>
 </form>
 
-{{$a}}
+{{-- {{$a}} --}}
