@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+</head>
+
+<body>
+
+
+    <form id="form1" name="form1" method="post" action="#" onsubmit="return valida_form(this)">
+        <label for="CNPJ">CNPJ</label>
+        <input name="CNPJ" type="text" id="CNPJ_input" size="35" />
+        <button>aperte aqui</button>
+    </form>
+
+    <script type="text/javascript" language="javascript">
+        function valida_form() {
+            if (document.getElementById("CNPJ_input").value.length < 1) {
+                alert('Por favor, preencha o campo CNPJ');
+                document.getElementById("CNPJ_input").focus();
+                return false
+            }
+        }
+    </script>
+
+</body>
+
+</html>
