@@ -29,7 +29,7 @@
                 @php
                     $teste = 1065765765
                 @endphp
-                @component('site.layouts._components.form_contato', ['a' => $teste])
+                @component('site.layouts._components.form_contato', ['a' => $teste, 'motivo_contatos' => $motivo_contatos])
                     
                 @endcomponent
                 
