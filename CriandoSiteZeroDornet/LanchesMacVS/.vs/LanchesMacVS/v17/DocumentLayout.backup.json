@@ -3,6 +3,22 @@
   "WorkspaceRootPath": "C:\\GitHub\\Cursos-Udemy\\CriandoSiteZeroDornet\\LanchesMacVS\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{C5A23819-B815-409A-9A8C-1AD913164776}|LanchesMacVS.csproj|c:\\github\\cursos-udemy\\criandositezerodornet\\lanchesmacvs\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{C5A23819-B815-409A-9A8C-1AD913164776}|LanchesMacVS.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C5A23819-B815-409A-9A8C-1AD913164776}|LanchesMacVS.csproj|c:\\github\\cursos-udemy\\criandositezerodornet\\lanchesmacvs\\context\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C5A23819-B815-409A-9A8C-1AD913164776}|LanchesMacVS.csproj|solutionrelative:context\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C5A23819-B815-409A-9A8C-1AD913164776}|LanchesMacVS.csproj|c:\\github\\cursos-udemy\\criandositezerodornet\\lanchesmacvs\\lanchesmacvs.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{C5A23819-B815-409A-9A8C-1AD913164776}|LanchesMacVS.csproj|solutionrelative:lanchesmacvs.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C5A23819-B815-409A-9A8C-1AD913164776}|LanchesMacVS.csproj|c:\\github\\cursos-udemy\\criandositezerodornet\\lanchesmacvs\\models\\categoria.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C5A23819-B815-409A-9A8C-1AD913164776}|LanchesMacVS.csproj|solutionrelative:models\\categoria.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{C5A23819-B815-409A-9A8C-1AD913164776}|LanchesMacVS.csproj|c:\\github\\cursos-udemy\\criandositezerodornet\\lanchesmacvs\\models\\lanche.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C5A23819-B815-409A-9A8C-1AD913164776}|LanchesMacVS.csproj|solutionrelative:models\\lanche.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -37,10 +53,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{C5A23819-B815-409A-9A8C-1AD913164776}|LanchesMacVS.csproj|c:\\github\\cursos-udemy\\criandositezerodornet\\lanchesmacvs\\controllers\\testecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C5A23819-B815-409A-9A8C-1AD913164776}|LanchesMacVS.csproj|solutionrelative:controllers\\testecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C5A23819-B815-409A-9A8C-1AD913164776}|LanchesMacVS.csproj|c:\\github\\cursos-udemy\\criandositezerodornet\\lanchesmacvs\\lanchesmacvs.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{C5A23819-B815-409A-9A8C-1AD913164776}|LanchesMacVS.csproj|solutionrelative:lanchesmacvs.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     }
   ],
   "DocumentGroupContainers": [
@@ -55,23 +67,136 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\GitHub\\Cursos-Udemy\\CriandoSiteZeroDornet\\LanchesMacVS\\appsettings.json",
+              "RelativeDocumentMoniker": "appsettings.json",
+              "ToolTip": "C:\\GitHub\\Cursos-Udemy\\CriandoSiteZeroDornet\\LanchesMacVS\\appsettings.json",
+              "RelativeToolTip": "appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAADAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-03-01T23:21:50.31Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "AppDbContext.cs",
+              "DocumentMoniker": "C:\\GitHub\\Cursos-Udemy\\CriandoSiteZeroDornet\\LanchesMacVS\\Context\\AppDbContext.cs",
+              "RelativeDocumentMoniker": "Context\\AppDbContext.cs",
+              "ToolTip": "C:\\GitHub\\Cursos-Udemy\\CriandoSiteZeroDornet\\LanchesMacVS\\Context\\AppDbContext.cs",
+              "RelativeToolTip": "Context\\AppDbContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAyAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-01T23:09:14.787Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Categoria.cs",
+              "DocumentMoniker": "C:\\GitHub\\Cursos-Udemy\\CriandoSiteZeroDornet\\LanchesMacVS\\Models\\Categoria.cs",
+              "RelativeDocumentMoniker": "Models\\Categoria.cs",
+              "ToolTip": "C:\\GitHub\\Cursos-Udemy\\CriandoSiteZeroDornet\\LanchesMacVS\\Models\\Categoria.cs",
+              "RelativeToolTip": "Models\\Categoria.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-01T20:53:57.804Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "Lanche.cs",
               "DocumentMoniker": "C:\\GitHub\\Cursos-Udemy\\CriandoSiteZeroDornet\\LanchesMacVS\\Models\\Lanche.cs",
               "RelativeDocumentMoniker": "Models\\Lanche.cs",
               "ToolTip": "C:\\GitHub\\Cursos-Udemy\\CriandoSiteZeroDornet\\LanchesMacVS\\Models\\Lanche.cs",
               "RelativeToolTip": "Models\\Lanche.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAbAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-02-28T01:11:17.781Z",
               "EditorCaption": ""
             },
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Privacy.cshtml",
+              "DocumentMoniker": "C:\\GitHub\\Cursos-Udemy\\CriandoSiteZeroDornet\\LanchesMacVS\\Views\\Home\\Privacy.cshtml",
+              "RelativeDocumentMoniker": "Views\\Home\\Privacy.cshtml",
+              "ToolTip": "C:\\GitHub\\Cursos-Udemy\\CriandoSiteZeroDornet\\LanchesMacVS\\Views\\Home\\Privacy.cshtml",
+              "RelativeToolTip": "Views\\Home\\Privacy.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-02-21T00:35:28.263Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 10,
+              "Title": "Demo.cshtml",
+              "DocumentMoniker": "C:\\GitHub\\Cursos-Udemy\\CriandoSiteZeroDornet\\LanchesMacVS\\Views\\Home\\Demo.cshtml",
+              "RelativeDocumentMoniker": "Views\\Home\\Demo.cshtml",
+              "ToolTip": "C:\\GitHub\\Cursos-Udemy\\CriandoSiteZeroDornet\\LanchesMacVS\\Views\\Home\\Demo.cshtml",
+              "RelativeToolTip": "Views\\Home\\Demo.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-02-21T00:34:48.883Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "C:\\GitHub\\Cursos-Udemy\\CriandoSiteZeroDornet\\LanchesMacVS\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "Controllers\\HomeController.cs",
+              "ToolTip": "C:\\GitHub\\Cursos-Udemy\\CriandoSiteZeroDornet\\LanchesMacVS\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "Controllers\\HomeController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-21T00:33:45.852Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\GitHub\\Cursos-Udemy\\CriandoSiteZeroDornet\\LanchesMacVS\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\GitHub\\Cursos-Udemy\\CriandoSiteZeroDornet\\LanchesMacVS\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-02-21T00:33:16.486Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\GitHub\\Cursos-Udemy\\CriandoSiteZeroDornet\\LanchesMacVS\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\Home\\Index.cshtml",
+              "ToolTip": "C:\\GitHub\\Cursos-Udemy\\CriandoSiteZeroDornet\\LanchesMacVS\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "Views\\Home\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-02-21T00:24:32.072Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "LanchesMacVS.csproj",
+              "DocumentMoniker": "C:\\GitHub\\Cursos-Udemy\\CriandoSiteZeroDornet\\LanchesMacVS\\LanchesMacVS.csproj",
+              "RelativeDocumentMoniker": "LanchesMacVS.csproj",
+              "ToolTip": "C:\\GitHub\\Cursos-Udemy\\CriandoSiteZeroDornet\\LanchesMacVS\\LanchesMacVS.csproj",
+              "RelativeToolTip": "LanchesMacVS.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-02-20T02:00:22.615Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
               "Title": "_Carousel.cshtml",
               "DocumentMoniker": "C:\\GitHub\\Cursos-Udemy\\CriandoSiteZeroDornet\\LanchesMacVS\\Views\\Shared\\_Carousel.cshtml",
               "RelativeDocumentMoniker": "Views\\Shared\\_Carousel.cshtml",
@@ -84,67 +209,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Privacy.cshtml",
-              "DocumentMoniker": "C:\\GitHub\\Cursos-Udemy\\CriandoSiteZeroDornet\\LanchesMacVS\\Views\\Home\\Privacy.cshtml",
-              "RelativeDocumentMoniker": "Views\\Home\\Privacy.cshtml",
-              "ToolTip": "C:\\GitHub\\Cursos-Udemy\\CriandoSiteZeroDornet\\LanchesMacVS\\Views\\Home\\Privacy.cshtml",
-              "RelativeToolTip": "Views\\Home\\Privacy.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-02-21T00:35:28.263Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Demo.cshtml",
-              "DocumentMoniker": "C:\\GitHub\\Cursos-Udemy\\CriandoSiteZeroDornet\\LanchesMacVS\\Views\\Home\\Demo.cshtml",
-              "RelativeDocumentMoniker": "Views\\Home\\Demo.cshtml",
-              "ToolTip": "C:\\GitHub\\Cursos-Udemy\\CriandoSiteZeroDornet\\LanchesMacVS\\Views\\Home\\Demo.cshtml",
-              "RelativeToolTip": "Views\\Home\\Demo.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-02-21T00:34:48.883Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "HomeController.cs",
-              "DocumentMoniker": "C:\\GitHub\\Cursos-Udemy\\CriandoSiteZeroDornet\\LanchesMacVS\\Controllers\\HomeController.cs",
-              "RelativeDocumentMoniker": "Controllers\\HomeController.cs",
-              "ToolTip": "C:\\GitHub\\Cursos-Udemy\\CriandoSiteZeroDornet\\LanchesMacVS\\Controllers\\HomeController.cs",
-              "RelativeToolTip": "Controllers\\HomeController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAiAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-21T00:33:45.852Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "_Layout.cshtml",
-              "DocumentMoniker": "C:\\GitHub\\Cursos-Udemy\\CriandoSiteZeroDornet\\LanchesMacVS\\Views\\Shared\\_Layout.cshtml",
-              "RelativeDocumentMoniker": "Views\\Shared\\_Layout.cshtml",
-              "ToolTip": "C:\\GitHub\\Cursos-Udemy\\CriandoSiteZeroDornet\\LanchesMacVS\\Views\\Shared\\_Layout.cshtml",
-              "RelativeToolTip": "Views\\Shared\\_Layout.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAMAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-02-21T00:33:16.486Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\GitHub\\Cursos-Udemy\\CriandoSiteZeroDornet\\LanchesMacVS\\Views\\Home\\Index.cshtml",
-              "RelativeDocumentMoniker": "Views\\Home\\Index.cshtml",
-              "ToolTip": "C:\\GitHub\\Cursos-Udemy\\CriandoSiteZeroDornet\\LanchesMacVS\\Views\\Home\\Index.cshtml",
-              "RelativeToolTip": "Views\\Home\\Index.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAcAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-02-21T00:24:32.072Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 11,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\GitHub\\Cursos-Udemy\\CriandoSiteZeroDornet\\LanchesMacVS\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
@@ -152,11 +217,12 @@
               "RelativeToolTip": "Program.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAAKAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-21T00:24:19.045Z"
+              "WhenOpened": "2025-02-21T00:24:19.045Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 12,
               "Title": "TesteController.cs",
               "DocumentMoniker": "C:\\GitHub\\Cursos-Udemy\\CriandoSiteZeroDornet\\LanchesMacVS\\Controllers\\TesteController.cs",
               "RelativeDocumentMoniker": "Controllers\\TesteController.cs",
@@ -164,19 +230,12 @@
               "RelativeToolTip": "Controllers\\TesteController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAaAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-20T02:04:21.103Z"
+              "WhenOpened": "2025-02-20T02:04:21.103Z",
+              "EditorCaption": ""
             },
             {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "LanchesMacVS.csproj",
-              "DocumentMoniker": "C:\\GitHub\\Cursos-Udemy\\CriandoSiteZeroDornet\\LanchesMacVS\\LanchesMacVS.csproj",
-              "RelativeDocumentMoniker": "LanchesMacVS.csproj",
-              "ToolTip": "C:\\GitHub\\Cursos-Udemy\\CriandoSiteZeroDornet\\LanchesMacVS\\LanchesMacVS.csproj",
-              "RelativeToolTip": "LanchesMacVS.csproj",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-02-20T02:00:22.615Z"
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
             }
           ]
         }
