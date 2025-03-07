@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "mY8ysT9Ka30=",
+  "dgSpecHash": "Wk62sJI0h34=",
   "success": true,
-  "projectFilePath": "C:\\GitHub\\Cursos-Udemy\\CriandoSiteZeroDornet\\LanchesMacVS\\LanchesMacVS.csproj",
+  "projectFilePath": "C:\\Users\\rodol\\source\\repos\\Cursos-Udemy\\CriandoSiteZeroDornet\\LanchesMacVS\\LanchesMacVS.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\rodol\\.nuget\\packages\\azure.core\\1.38.0\\azure.core.1.38.0.nupkg.sha512",
     "C:\\Users\\rodol\\.nuget\\packages\\azure.identity\\1.11.4\\azure.identity.1.11.4.nupkg.sha512",
