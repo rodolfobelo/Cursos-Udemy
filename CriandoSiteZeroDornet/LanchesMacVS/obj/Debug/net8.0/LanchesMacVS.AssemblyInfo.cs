@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("LanchesMacVS")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+386ae498479d77973ac5308f17b9a2756cc67032")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1592ab90d4acb1c5d06f3870fe6ce1335b3e6b5a")]
 [assembly: System.Reflection.AssemblyProductAttribute("LanchesMacVS")]
 [assembly: System.Reflection.AssemblyTitleAttribute("LanchesMacVS")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
