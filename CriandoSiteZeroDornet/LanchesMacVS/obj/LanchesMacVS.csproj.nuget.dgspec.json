@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\rodol\\source\\repos\\Cursos-Udemy\\CriandoSiteZeroDornet\\LanchesMacVS\\LanchesMacVS.csproj": {}
+    "C:\\Users\\rodolfo.belo\\GibHub\\Cursos-Udemy\\CriandoSiteZeroDornet\\LanchesMacVS\\LanchesMacVS.csproj": {}
   },
   "projects": {
-    "C:\\Users\\rodol\\source\\repos\\Cursos-Udemy\\CriandoSiteZeroDornet\\LanchesMacVS\\LanchesMacVS.csproj": {
+    "C:\\Users\\rodolfo.belo\\GibHub\\Cursos-Udemy\\CriandoSiteZeroDornet\\LanchesMacVS\\LanchesMacVS.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\rodol\\source\\repos\\Cursos-Udemy\\CriandoSiteZeroDornet\\LanchesMacVS\\LanchesMacVS.csproj",
+        "projectUniqueName": "C:\\Users\\rodolfo.belo\\GibHub\\Cursos-Udemy\\CriandoSiteZeroDornet\\LanchesMacVS\\LanchesMacVS.csproj",
         "projectName": "LanchesMacVS",
-        "projectPath": "C:\\Users\\rodol\\source\\repos\\Cursos-Udemy\\CriandoSiteZeroDornet\\LanchesMacVS\\LanchesMacVS.csproj",
-        "packagesPath": "C:\\Users\\rodol\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\rodol\\source\\repos\\Cursos-Udemy\\CriandoSiteZeroDornet\\LanchesMacVS\\obj\\",
+        "projectPath": "C:\\Users\\rodolfo.belo\\GibHub\\Cursos-Udemy\\CriandoSiteZeroDornet\\LanchesMacVS\\LanchesMacVS.csproj",
+        "packagesPath": "C:\\Users\\rodolfo.belo\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\rodolfo.belo\\GibHub\\Cursos-Udemy\\CriandoSiteZeroDornet\\LanchesMacVS\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\rodol\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\rodolfo.belo\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -84,7 +84,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.200/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.201/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
