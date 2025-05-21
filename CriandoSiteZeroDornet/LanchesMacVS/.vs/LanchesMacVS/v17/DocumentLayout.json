@@ -3,16 +3,28 @@
   "WorkspaceRootPath": "C:\\Users\\rodolfo.belo\\GibHub\\Cursos-Udemy\\CriandoSiteZeroDornet\\LanchesMacVS\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\rodolfo.belo\\GibHub\\Cursos-Udemy\\CriandoSiteZeroDornet\\LanchesMacVS\\Migrations\\20250424161153_begin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Migrations\\20250424161153_begin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C5A23819-B815-409A-9A8C-1AD913164776}|LanchesMacVS.csproj|c:\\users\\rodolfo.belo\\gibhub\\cursos-udemy\\criandositezerodornet\\lanchesmacvs\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{C5A23819-B815-409A-9A8C-1AD913164776}|LanchesMacVS.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C5A23819-B815-409A-9A8C-1AD913164776}|LanchesMacVS.csproj|c:\\users\\rodolfo.belo\\gibhub\\cursos-udemy\\criandositezerodornet\\lanchesmacvs\\startup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C5A23819-B815-409A-9A8C-1AD913164776}|LanchesMacVS.csproj|solutionrelative:startup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C5A23819-B815-409A-9A8C-1AD913164776}|LanchesMacVS.csproj|c:\\users\\rodolfo.belo\\gibhub\\cursos-udemy\\criandositezerodornet\\lanchesmacvs\\context\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C5A23819-B815-409A-9A8C-1AD913164776}|LanchesMacVS.csproj|solutionrelative:context\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{C5A23819-B815-409A-9A8C-1AD913164776}|LanchesMacVS.csproj|c:\\users\\rodolfo.belo\\gibhub\\cursos-udemy\\criandositezerodornet\\lanchesmacvs\\migrations\\20250317104444_popularlanches.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C5A23819-B815-409A-9A8C-1AD913164776}|LanchesMacVS.csproj|solutionrelative:migrations\\20250317104444_popularlanches.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{C5A23819-B815-409A-9A8C-1AD913164776}|LanchesMacVS.csproj|c:\\users\\rodolfo.belo\\gibhub\\cursos-udemy\\criandositezerodornet\\lanchesmacvs\\migrations\\20250317104000_popularcategorias.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C5A23819-B815-409A-9A8C-1AD913164776}|LanchesMacVS.csproj|solutionrelative:migrations\\20250317104000_popularcategorias.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C5A23819-B815-409A-9A8C-1AD913164776}|LanchesMacVS.csproj|c:\\users\\rodolfo.belo\\gibhub\\cursos-udemy\\criandositezerodornet\\lanchesmacvs\\startup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C5A23819-B815-409A-9A8C-1AD913164776}|LanchesMacVS.csproj|solutionrelative:startup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{C5A23819-B815-409A-9A8C-1AD913164776}|LanchesMacVS.csproj|c:\\users\\rodolfo.belo\\gibhub\\cursos-udemy\\criandositezerodornet\\lanchesmacvs\\views\\lanche\\list.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
@@ -55,16 +67,8 @@
       "RelativeMoniker": "D:0:0:{C5A23819-B815-409A-9A8C-1AD913164776}|LanchesMacVS.csproj|solutionrelative:repositories\\interfaces\\icategoriasrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C5A23819-B815-409A-9A8C-1AD913164776}|LanchesMacVS.csproj|c:\\users\\rodolfo.belo\\gibhub\\cursos-udemy\\criandositezerodornet\\lanchesmacvs\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{C5A23819-B815-409A-9A8C-1AD913164776}|LanchesMacVS.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{C5A23819-B815-409A-9A8C-1AD913164776}|LanchesMacVS.csproj|c:\\users\\rodolfo.belo\\gibhub\\cursos-udemy\\criandositezerodornet\\lanchesmacvs\\models\\categoria.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C5A23819-B815-409A-9A8C-1AD913164776}|LanchesMacVS.csproj|solutionrelative:models\\categoria.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C5A23819-B815-409A-9A8C-1AD913164776}|LanchesMacVS.csproj|c:\\users\\rodolfo.belo\\gibhub\\cursos-udemy\\criandositezerodornet\\lanchesmacvs\\context\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C5A23819-B815-409A-9A8C-1AD913164776}|LanchesMacVS.csproj|solutionrelative:context\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{C5A23819-B815-409A-9A8C-1AD913164776}|LanchesMacVS.csproj|c:\\users\\rodolfo.belo\\gibhub\\cursos-udemy\\criandositezerodornet\\lanchesmacvs\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -106,11 +110,24 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 9,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 0,
+              "Title": "20250424161153_begin.cs",
+              "DocumentMoniker": "C:\\Users\\rodolfo.belo\\GibHub\\Cursos-Udemy\\CriandoSiteZeroDornet\\LanchesMacVS\\Migrations\\20250424161153_begin.cs",
+              "RelativeDocumentMoniker": "Migrations\\20250424161153_begin.cs",
+              "ToolTip": "C:\\Users\\rodolfo.belo\\GibHub\\Cursos-Udemy\\CriandoSiteZeroDornet\\LanchesMacVS\\Migrations\\20250424161153_begin.cs",
+              "RelativeToolTip": "Migrations\\20250424161153_begin.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-24T16:11:53.265Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
               "Title": "_ViewImports.cshtml",
               "DocumentMoniker": "C:\\Users\\rodolfo.belo\\GibHub\\Cursos-Udemy\\CriandoSiteZeroDornet\\LanchesMacVS\\Views\\_ViewImports.cshtml",
               "RelativeDocumentMoniker": "Views\\_ViewImports.cshtml",
@@ -122,7 +139,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 7,
               "Title": "LancheListViewModel.cs",
               "DocumentMoniker": "C:\\Users\\rodolfo.belo\\GibHub\\Cursos-Udemy\\CriandoSiteZeroDornet\\LanchesMacVS\\ViewModels\\LancheListViewModel.cs",
               "RelativeDocumentMoniker": "ViewModels\\LancheListViewModel.cs",
@@ -134,7 +151,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 9,
               "Title": "_ViewStart.cshtml",
               "DocumentMoniker": "C:\\Users\\rodolfo.belo\\GibHub\\Cursos-Udemy\\CriandoSiteZeroDornet\\LanchesMacVS\\Views\\_ViewStart.cshtml",
               "RelativeDocumentMoniker": "Views\\_ViewStart.cshtml",
@@ -146,7 +163,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 6,
               "Title": "List.cshtml",
               "DocumentMoniker": "C:\\Users\\rodolfo.belo\\GibHub\\Cursos-Udemy\\CriandoSiteZeroDornet\\LanchesMacVS\\Views\\Lanche\\List.cshtml",
               "RelativeDocumentMoniker": "Views\\Lanche\\List.cshtml",
@@ -158,7 +175,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 8,
               "Title": "LancheController.cs",
               "DocumentMoniker": "C:\\Users\\rodolfo.belo\\GibHub\\Cursos-Udemy\\CriandoSiteZeroDornet\\LanchesMacVS\\Controllers\\LancheController.cs",
               "RelativeDocumentMoniker": "Controllers\\LancheController.cs",
@@ -170,7 +187,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 12,
               "Title": "ILanchesRepository.cs",
               "DocumentMoniker": "C:\\Users\\rodolfo.belo\\GibHub\\Cursos-Udemy\\CriandoSiteZeroDornet\\LanchesMacVS\\Repositories\\Interfaces\\ILanchesRepository.cs",
               "RelativeDocumentMoniker": "Repositories\\Interfaces\\ILanchesRepository.cs",
@@ -182,7 +199,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 13,
               "Title": "LanchesRepository.cs",
               "DocumentMoniker": "C:\\Users\\rodolfo.belo\\GibHub\\Cursos-Udemy\\CriandoSiteZeroDornet\\LanchesMacVS\\Repositories\\LanchesRepository.cs",
               "RelativeDocumentMoniker": "Repositories\\LanchesRepository.cs",
@@ -194,7 +211,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 15,
               "Title": "ICategoriasRepository.cs",
               "DocumentMoniker": "C:\\Users\\rodolfo.belo\\GibHub\\Cursos-Udemy\\CriandoSiteZeroDornet\\LanchesMacVS\\Repositories\\Interfaces\\ICategoriasRepository.cs",
               "RelativeDocumentMoniker": "Repositories\\Interfaces\\ICategoriasRepository.cs",
@@ -206,7 +223,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 14,
               "Title": "CategoriaRepository.cs",
               "DocumentMoniker": "C:\\Users\\rodolfo.belo\\GibHub\\Cursos-Udemy\\CriandoSiteZeroDornet\\LanchesMacVS\\Repositories\\CategoriaRepository.cs",
               "RelativeDocumentMoniker": "Repositories\\CategoriaRepository.cs",
@@ -218,7 +235,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 4,
               "Title": "20250317104444_PopularLanches.cs",
               "DocumentMoniker": "C:\\Users\\rodolfo.belo\\GibHub\\Cursos-Udemy\\CriandoSiteZeroDornet\\LanchesMacVS\\Migrations\\20250317104444_PopularLanches.cs",
               "RelativeDocumentMoniker": "Migrations\\20250317104444_PopularLanches.cs",
@@ -231,7 +248,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 5,
               "Title": "20250317104000_PopularCategorias.cs",
               "DocumentMoniker": "C:\\Users\\rodolfo.belo\\GibHub\\Cursos-Udemy\\CriandoSiteZeroDornet\\LanchesMacVS\\Migrations\\20250317104000_PopularCategorias.cs",
               "RelativeDocumentMoniker": "Migrations\\20250317104000_PopularCategorias.cs",
@@ -239,8 +256,7 @@
               "RelativeToolTip": "Migrations\\20250317104000_PopularCategorias.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAADwvxAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-17T10:40:01.066Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-17T10:40:01.066Z"
             },
             {
               "$type": "Document",
@@ -250,26 +266,27 @@
               "RelativeDocumentMoniker": "Startup.cs",
               "ToolTip": "C:\\Users\\rodolfo.belo\\GibHub\\Cursos-Udemy\\CriandoSiteZeroDornet\\LanchesMacVS\\Startup.cs",
               "RelativeToolTip": "Startup.cs",
-              "ViewState": "AgIAAAoAAAAAAAAAAAAAwBQAAABeAAAAAAAAAA==",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAAwBoAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-08T02:39:21.135Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 1,
               "Title": "appsettings.json",
               "DocumentMoniker": "C:\\Users\\rodolfo.belo\\GibHub\\Cursos-Udemy\\CriandoSiteZeroDornet\\LanchesMacVS\\appsettings.json",
               "RelativeDocumentMoniker": "appsettings.json",
-              "ToolTip": "C:\\Users\\rodolfo.belo\\GibHub\\Cursos-Udemy\\CriandoSiteZeroDornet\\LanchesMacVS\\appsettings.json",
-              "RelativeToolTip": "appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
+              "ToolTip": "C:\\Users\\rodolfo.belo\\GibHub\\Cursos-Udemy\\CriandoSiteZeroDornet\\LanchesMacVS\\appsettings.json*",
+              "RelativeToolTip": "appsettings.json*",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-03-01T23:21:50.31Z"
+              "WhenOpened": "2025-03-01T23:21:50.31Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 3,
               "Title": "AppDbContext.cs",
               "DocumentMoniker": "C:\\Users\\rodolfo.belo\\GibHub\\Cursos-Udemy\\CriandoSiteZeroDornet\\LanchesMacVS\\Context\\AppDbContext.cs",
               "RelativeDocumentMoniker": "Context\\AppDbContext.cs",
@@ -277,11 +294,12 @@
               "RelativeToolTip": "Context\\AppDbContext.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAyAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-01T23:09:14.787Z"
+              "WhenOpened": "2025-03-01T23:09:14.787Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 16,
               "Title": "Categoria.cs",
               "DocumentMoniker": "C:\\Users\\rodolfo.belo\\GibHub\\Cursos-Udemy\\CriandoSiteZeroDornet\\LanchesMacVS\\Models\\Categoria.cs",
               "RelativeDocumentMoniker": "Models\\Categoria.cs",
@@ -293,7 +311,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 23,
               "Title": "Privacy.cshtml",
               "DocumentMoniker": "C:\\Users\\rodolfo.belo\\GibHub\\Cursos-Udemy\\CriandoSiteZeroDornet\\LanchesMacVS\\Views\\Home\\Privacy.cshtml",
               "RelativeDocumentMoniker": "Views\\Home\\Privacy.cshtml",
@@ -305,7 +323,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 24,
               "Title": "Demo.cshtml",
               "DocumentMoniker": "C:\\Users\\rodolfo.belo\\GibHub\\Cursos-Udemy\\CriandoSiteZeroDornet\\LanchesMacVS\\Views\\Home\\Demo.cshtml",
               "RelativeDocumentMoniker": "Views\\Home\\Demo.cshtml",
@@ -317,7 +335,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 22,
               "Title": "HomeController.cs",
               "DocumentMoniker": "C:\\Users\\rodolfo.belo\\GibHub\\Cursos-Udemy\\CriandoSiteZeroDornet\\LanchesMacVS\\Controllers\\HomeController.cs",
               "RelativeDocumentMoniker": "Controllers\\HomeController.cs",
@@ -329,7 +347,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 11,
               "Title": "_Layout.cshtml",
               "DocumentMoniker": "C:\\Users\\rodolfo.belo\\GibHub\\Cursos-Udemy\\CriandoSiteZeroDornet\\LanchesMacVS\\Views\\Shared\\_Layout.cshtml",
               "RelativeDocumentMoniker": "Views\\Shared\\_Layout.cshtml",
@@ -341,7 +359,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 21,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\Users\\rodolfo.belo\\GibHub\\Cursos-Udemy\\CriandoSiteZeroDornet\\LanchesMacVS\\Views\\Home\\Index.cshtml",
               "RelativeDocumentMoniker": "Views\\Home\\Index.cshtml",
@@ -353,7 +371,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 19,
               "Title": "LanchesMacVS.csproj",
               "DocumentMoniker": "C:\\Users\\rodolfo.belo\\GibHub\\Cursos-Udemy\\CriandoSiteZeroDornet\\LanchesMacVS\\LanchesMacVS.csproj",
               "RelativeDocumentMoniker": "LanchesMacVS.csproj",
@@ -365,7 +383,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 20,
               "Title": "_Carousel.cshtml",
               "DocumentMoniker": "C:\\Users\\rodolfo.belo\\GibHub\\Cursos-Udemy\\CriandoSiteZeroDornet\\LanchesMacVS\\Views\\Shared\\_Carousel.cshtml",
               "RelativeDocumentMoniker": "Views\\Shared\\_Carousel.cshtml",
@@ -377,7 +395,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 17,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\rodolfo.belo\\GibHub\\Cursos-Udemy\\CriandoSiteZeroDornet\\LanchesMacVS\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
@@ -389,7 +407,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 18,
               "Title": "TesteController.cs",
               "DocumentMoniker": "C:\\Users\\rodolfo.belo\\GibHub\\Cursos-Udemy\\CriandoSiteZeroDornet\\LanchesMacVS\\Controllers\\TesteController.cs",
               "RelativeDocumentMoniker": "Controllers\\TesteController.cs",
@@ -398,10 +416,6 @@
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAaAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-02-20T02:04:21.103Z"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
             }
           ]
         }
